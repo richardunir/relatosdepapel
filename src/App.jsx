@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Checkout from './pages/checkout';
-import Access from './pages/access';
-import './App.css'
+import Access from './pages/access.jsx';
+import './App.css';
 
 function App() {
   return (

@@ -199,3 +199,18 @@ export function Copyright() {
   </section>
 );
 }
+
+function Access() {
+  return (
+    <div className="components-access">
+      <Header/>
+      <HeroSection/>
+      <MainContent/>
+      <EmailSubscription/>
+      <Footer/>
+      <Copyright/>
+    </div>
+  );
+}
+
+export default Access;
