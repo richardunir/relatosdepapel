@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Checkout from './pages/checkout';
+import Access from './pages/access';
 import './App.css'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
-        {/* Agrega más rutas aquí */}
+        <Route path="/access" element={<Access/>} />
       </Routes>
     </Router>
   );

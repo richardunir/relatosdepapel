@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+h2,p,div {
+  text-align: center;
+}
+
+h4 {
+margin-left: 8%;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+li,
+.featured,
+#pitemfeature,
+#newsletter-title,
+.footer {
+  margin: 12px 16px;
+}
+
+#hero-title,
+#hero-paragraph,
+.hero-buttons,
+.footer-title,
+.footer-paragraph {
+  text-align: left;
+}
+
+.buttons,
+.menu,
+.features,
+.books,
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 2%;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 2%;
+}
+
+.logo {
+  margin-left: 4%;
+}
+
+.hero-stats,
+.footer {
+  display: flex;
+}
+
+
+.main-content {
+  padding: 20px;
+}
+
+.hero-text{
+  margin-left: 3%;
+}
+
+.footer-owns,
+.footer-help,
+.footer-legal {
+  margin-left: 8%;
+  text-align: left;
+}
+
+.footer-relatos {
+  margin-left: 2%;
+}
