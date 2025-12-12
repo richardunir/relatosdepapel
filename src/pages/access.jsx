@@ -10,6 +10,20 @@ import bookMisterios from "../assets/misterios.png";
 import bookAmor from "../assets/amor.png";
 import emailImage from "../assets/email2.png";
 
+function Access() {
+  return (
+    <div className="components-access">
+      <Header/>
+      <HeroSection/>
+      <MainContent/>
+      <EmailSubscription/>
+      <Footer/>
+      <Copyright/>
+    </div>
+  );
+}
+export default Access;
+
 export function Header() {
   return (
     <header>
@@ -23,9 +37,16 @@ export function Header() {
           <li className="menu-sell"><a href="#mas-vendidos">Más Vendidos</a></li>
           <li className="menu-contact"><a href="#sobre-nosotros">Sobre nosotros</a></li>
           
-          <li className="button-search"><button aria-label="Buscar">🔎</button></li>
-          <li className="button-profile"><button aria-label="Perfil de usuario">💆</button></li>
-          <li className="button-cart"><button aria-label="Carrito de compras">🛒</button></li>
+          <a className="button-search" href="/search">
+           <img src="/src/assets/search.png"/>
+          </a>
+           <a className="button-profile" href="/profile">
+           <img src="/src/assets/profile.png"/>
+          </a>
+           <a className="button-cart" href="/cart">
+           <img src="/src/assets/carrito.png"/>
+          </a>
+          
         </ul>
       </nav>
     </header>
@@ -41,8 +62,8 @@ export function HeroSection() {
           títulos esperando por ti.
         </p>
         <div className="hero-buttons">
-          <button className="button-explore">Explorar librería</button>
-          <button className="button-feature">Ver Novedades</button>
+          <button className="button-style" type="button">Explorar Libreria</button>
+          <button className="button-style" type="button">Ver Novedades</button>
         </div>
         <div className="hero-stats">
           <p className="number">5000+</p>
@@ -104,7 +125,8 @@ export function MainContent() {
           <p className="book-rating" aria-label="Valoración: 4.8 de 5 estrellas">⭐⭐⭐⭐⭐ 4.8</p>
           <div className="price-container">
             <p className="book-price">$ 60.000</p>
-            <button>Añadir</button>
+              <img className="image-cart" src="/src/assets/iconcart.png"/>
+            <button type="button"> </button>
           </div>    
         </article>
         <article className="book-card">
@@ -114,7 +136,8 @@ export function MainContent() {
           <p className="book-rating" aria-label="Valoración: 4.9 de 5 estrellas">⭐⭐⭐⭐⭐ 4.9</p>
           <div className="price-container">
             <p className="book-price">$ 90.000</p>
-            <button>Añadir</button>
+              <img className="image-cart" src="/src/assets/iconcart.png"/>
+            <button type="button"></button>
           </div>
         </article>
         <article className="book-card">
@@ -124,7 +147,8 @@ export function MainContent() {
           <p className="book-rating" aria-label="Valoración: 4.7 de 5 estrellas">⭐⭐⭐⭐⭐ 4.7</p>
           <div className="price-container">
             <p className="book-price">$ 70.000</p>
-            <button>Añadir</button>
+              <img className="image-cart" src="/src/assets/iconcart.png"/>
+            <button type="button"></button>
           </div>
 
         </article>
@@ -135,11 +159,12 @@ export function MainContent() {
           <p className="book-rating" aria-label="Valoración: 4.6 de 5 estrellas">⭐⭐⭐⭐⭐ 4.6</p>
           <div className="price-container">
             <p className="book-price">$ 80.000</p>
-            <button>Añadir</button>
+              <img className="image-cart"  src="/src/assets/iconcart.png"/>
+            <button type="button"></button>
           </div>
         </article>
       </section>
-      <button className="button-allbooks">Ver todos los libros</button>
+       <button className="button-all" type="button"> Ver todos los libros </button>
     </main>
   );
 }
@@ -153,7 +178,7 @@ export function EmailSubscription() {
         y recomendaciones personalizadas directamente en tu correo.</p>
       <label htmlFor="email-input" className="email-input"></label>
       <input type="email" id="email-input" placeholder="tucorreo@email.com" aria-label="Introduce tu correo electrónico"/>
-      <button className="button-suscribe" type="submit">Suscribirse</button>
+      <button className="button-suscribe" type="submit"> Suscribirse </button>
     </div>
   );
 }
@@ -204,17 +229,3 @@ export function Copyright() {
 );
 }
 
-function Access() {
-  return (
-    <div className="components-access">
-      <Header/>
-      <HeroSection/>
-      <MainContent/>
-      <EmailSubscription/>
-      <Footer/>
-      <Copyright/>
-    </div>
-  );
-}
-
-export default Access;

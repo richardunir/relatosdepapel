@@ -117,6 +117,10 @@ li,
   margin-left: 1%;
 }
 
+.book-description{
+  padding-bottom: 4%;
+}
+
 .button-allbooks,
 .image-email,
 .title-suscribe,
@@ -125,14 +129,21 @@ li,
   margin-top: 2%;
 }
 
+.book-price{
+  margin-top: 4%;
+}
+
+.book-rating{
+  margin-top: 2%;
+}
+
 .book-detail {
   position: absolute;
   top: 84%;
-  
   background-color: rgba(255, 255, 255, 0.8);
   padding: 3% 5%;
   border-radius: 8%;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 1% 1.2% rgba(0,0,0,0.1);
   z-index: 10;
 }
 
@@ -145,11 +156,63 @@ li,
 text-align: start;
 }
 
+.button-profile,
+.button-search {
+  padding-top: 1%;
+  padding-right: 1%;
+}
+
+.button-cart{
+  padding-top: 0.6%;
+}
+
+.button-style{
+  border-radius: 10%;
+  background: #fafafa;
+  display: flex;
+  width: 28%;
+  padding: 2.1% 5% 2.1% 4.28%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6%;
+}
+
+.button-all{
+  border-radius: 10%;
+  background: #fafafa;
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6%;
+  margin-top: 4%;
+  margin-left: 45%;
+}
+
+.button-suscribe{
+  border-radius: 10%;
+  background: #fafafa;
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6%;
+  margin-left: 45%;
+}
+
+.image-cart {
+ margin-left: 32%;
+}
+
 .footer-owns,
 .footer-help,
 .footer-legal {
   text-align: start;
   margin-left: 8%;
+}
+
+.footer-title{
+  padding-bottom: 4%;
 }
 
 .footer-li{
