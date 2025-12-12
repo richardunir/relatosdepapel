@@ -1,0 +1,118 @@
+/* HEADER */
+.header-libro {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 40px;
+}
+
+.navbar-libro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* DETALLE DEL LIBRO */
+.detalle-libro {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+}
+
+.libro-imagen img {
+    width: 250px;
+    height: 350px;
+    background: #ddd;
+    
+}
+
+.libro-info {
+    flex: 1;
+}
+
+.btn-deseos {
+    margin: 10px 0;
+    padding: 8px 12px;
+    background: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* ASIDE COMPRA */
+.compra-box {
+    width: 200px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.precio {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-comprar {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* DESTACADOS */
+.destacados {
+    padding: 40px;
+    text-align: center;
+}
+
+.destacados-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-destacado {
+    width: 150px;
+    padding: 10px;
+}
+
+.card-destacado img {
+    width: 100%;
+    height: 180px;
+    background: #ddd;
+}
+
+.btn-vermas {
+    margin-top: 10px;
+    padding: 6px 10px;
+}
+
+/* FOOTER */
+.vista-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background: white;
+    color: #111;
+}
+
+.vista-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.copyright-libro {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
