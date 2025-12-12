@@ -9,10 +9,6 @@ h2,p,div {
   text-align: center;
 }
 
-h4 {
-margin-left: 8%;
-}
-
 a{
   text-decoration: none;
   color: #000000;
@@ -20,10 +16,9 @@ a{
 
 li,
 .featured,
-#pitemfeature,
 #newsletter-title,
 .footer {
-  margin: 12px 16px;
+  margin: 1% 1.2%;
 }
 
 #hero-title,
@@ -43,17 +38,15 @@ li,
   justify-content: space-between;
   text-align: center;
   margin-left: 2%;
+  margin-top: 1%;
+  margin-right: 2%;
 }
 
 .navbar-header {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-left: 2%;
-}
-
-.logo {
-  margin-left: 4%;
+  margin-top: 0.4%;
 }
 
 .hero-stats,
@@ -61,22 +54,104 @@ li,
   display: flex;
 }
 
-
 .main-content {
-  padding: 20px;
+  padding: 1%;
+}
+
+#hero-title, 
+#hero-paragraph,
+.button-explore {
+  margin-bottom: 2%;
 }
 
 .hero-text{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
   margin-left: 3%;
+  margin-top: 12%;
+}
+
+.button-explore{
+  margin-right: 3%;
+}
+
+.logo{
+  padding-right: 6%;
+}
+
+.menu-contact,
+.logo{
+  padding-right: 20%;
+}
+
+.image-library {
+  justify-content: flex-end;
+  position: relative;
+  display: inline-block;
+  margin-left: 64%;
+}
+
+.image-hero {
+  height: auto;
+  display: block;
+  border-radius: 3%;
+  margin-right: 3%;
+  margin-top: 2%;
+}
+
+.number{
+  margin-bottom: 0;
+}
+
+.text{
+  margin-top: 4%;
+}
+
+.button-suscribe{
+  margin-left: 1%;
+}
+
+.book-detail {
+  position: absolute;
+  top: 81%;
+  
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3% 5%;
+  border-radius: 8%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.book-month,
+.book-title,
+.book-stars,
+.book-description,
+.book-author,
+.book-rating {
+text-align: start;
 }
 
 .footer-owns,
 .footer-help,
 .footer-legal {
-  margin-left: 8%;
-  text-align: left;
+  text-align: start;
+  margin-left: 9%;
+}
+
+.footer-li{
+  margin: 2% 0%;
+}
+
+.footer-help{
+  margin-left: 18%;
+  margin-right: 16%;
 }
 
 .footer-relatos {
   margin-left: 2%;
+}
+
+.footer{
+  padding-top: 2%;
 }

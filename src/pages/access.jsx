@@ -17,15 +17,15 @@ export function Header() {
         <ul className="navbar-header">
           <li className="logo"><a href="/">Relatos de papel</a></li> 
 
-          <li className="menu"><a href="#inicio">Inicio</a></li>
-          <li className="menu"><a href="#categorias">Categorias</a></li>
-          <li className="menu"><a href="#novedades">Novedades</a></li>
-          <li className="menu"><a href="#mas-vendidos">Más Vendidos</a></li>
-          <li className="menu"><a href="#sobre-nosotros">Sobre nosotros</a></li>
+          <li className="menu-home"><a href="#inicio">Inicio</a></li>
+          <li className="menu-categories"><a href="#categorias">Categorias</a></li>
+          <li className="menu-feaures"><a href="#novedades">Novedades</a></li>
+          <li className="menu-sell"><a href="#mas-vendidos">Más Vendidos</a></li>
+          <li className="menu-contact"><a href="#sobre-nosotros">Sobre nosotros</a></li>
           
-          <li className="buttons"><button aria-label="Buscar">🔎</button></li>
-          <li className="buttons"><button aria-label="Perfil de usuario">💆</button></li>
-          <li className="buttons"><button aria-label="Carrito de compras">🛒</button></li>
+          <li className="button-search"><button aria-label="Buscar">🔎</button></li>
+          <li className="button-profile"><button aria-label="Perfil de usuario">💆</button></li>
+          <li className="button-cart"><button aria-label="Carrito de compras">🛒</button></li>
         </ul>
       </nav>
     </header>
@@ -37,22 +37,27 @@ export function HeroSection() {
     <div className="hero-section" aria-labelledby="hero-title">
       <div className="hero-text">
         <h2 id="hero-title">Bienvenidos a Relatos de Papel</h2>
-        <p id="hero-paragraph">Tu librería digital para descubrir, comprar y vivir nuevas historias. Miles de
+        <p id="hero-paragraph">Tu librería digital para descubrir, comprar y vivir nuevas historias. Miles de <br />
           títulos esperando por ti.
         </p>
         <div className="hero-buttons">
-          <button>Explorar librería</button>
-          <button>Ver Novedades</button>
+          <button className="button-explore">Explorar librería</button>
+          <button className="button-feature">Ver Novedades</button>
         </div>
         <div className="hero-stats">
-          <p><strong>5000+</strong></p>
-          <p>Libros disponibles</p>|
-          <p><strong>10000+</strong></p>
-          <p>Lectores felices</p>
+          <p className="number">5000+</p>
+          <p className="text">Libros disponibles</p>|
+          <p className="number">10000+</p>
+          <p className="text">Lectores felices</p>
         </div>
       </div>
       <div className="image-library">
-        <img src={accessImage} alt="Libreria cafe grande con estanteria de dos pisos" />
+        <img className="image-hero" src={accessImage} alt="Libreria cafe grande con estanteria de dos pisos" />
+        <div className="book-detail">
+          <p className="book-month">Libro del mes</p>
+          <p className="book-title">Cien años de soledad</p>
+          <p className="book-stars">⭐⭐⭐⭐⭐ 4.9</p>
+        </div>
       </div>
     </div>
   );
@@ -94,7 +99,7 @@ export function MainContent() {
       <section className="books">
         <article className="book-card">
           <img src={bookSusurro} alt="Portada del libro El Susurro de las páginas" />
-          <h3>El Susurro de las páginas</h3>
+          <h3 className="book-description">El Susurro de las páginas</h3>
           <p className="book-author">María Garcia</p>
           <p className="book-rating" aria-label="Valoración: 4.8 de 5 estrellas">⭐⭐⭐⭐⭐ 4.8</p>
           <div className="price-container">
@@ -104,7 +109,7 @@ export function MainContent() {
         </article>
         <article className="book-card">
           <img src={bookCronicas} alt="Portada del libro Crónicas del tiempo" />
-          <h3>Crónicas del tiempo</h3>
+          <h3 className="book-description">Crónicas del tiempo</h3>
           <p className="book-author">Carlos Ruiz</p>
           <p className="book-rating" aria-label="Valoración: 4.9 de 5 estrellas">⭐⭐⭐⭐⭐ 4.9</p>
           <div className="price-container">
@@ -114,7 +119,7 @@ export function MainContent() {
         </article>
         <article className="book-card">
           <img src={bookMisterios} alt="Portada del libro Misterios de medianoche" />
-          <h3>Misterios de medianoche</h3>
+          <h3 className="book-description">Misterios de medianoche</h3>
           <p className="book-author">Ana Martínez</p>
           <p className="book-rating" aria-label="Valoración: 4.7 de 5 estrellas">⭐⭐⭐⭐⭐ 4.7</p>
           <div className="price-container">
@@ -125,7 +130,7 @@ export function MainContent() {
         </article>
         <article className="book-card">
           <img src={bookAmor} alt="Portada del libro Amor en las estrellas" />
-          <h3>Amor en las estrellas</h3>
+          <h3 className="book-description">Amor en las estrellas</h3>
           <p className="book-author">Laura Fernández</p>
           <p className="book-rating" aria-label="Valoración: 4.6 de 5 estrellas">⭐⭐⭐⭐⭐ 4.6</p>
           <div className="price-container">
@@ -148,7 +153,7 @@ export function EmailSubscription() {
         y recomendaciones personalizadas directamente en tu correo.</p>
       <label htmlFor="email-input" className="email-input"></label>
       <input type="email" id="email-input" placeholder="tucorreo@email.com" aria-label="Introduce tu correo electrónico"/>
-      <button type="submit">Suscribirse</button>
+      <button className="button-suscribe" type="submit">Suscribirse</button>
     </div>
   );
 }
@@ -158,7 +163,7 @@ export function Footer() {
     <footer className="footer">
       <div className="footer-relatos">
         <h3 className="footer-title">Relatos de Papel</h3>
-        <p className="footer-paragraph">Tu librería digital para descubrir, comprar y vivir nuevas historias</p>
+        <p className="footer-paragraph">Tu librería digital para descubrir, comprar y vivir <br/> nuevas historias</p>
       </div>
       <div className="footer-owns">
         <h4>Sobre Nosotros</h4>
@@ -173,7 +178,7 @@ export function Footer() {
       <div className="footer-help">
         <h4>Ayuda</h4>
         <ul>
-          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+          <li className="footer-li"><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="#devoluciones">Devoluciones</a></li>
           <li><a href="#soporte">Soporte</a></li>
@@ -182,7 +187,7 @@ export function Footer() {
       <div className="footer-legal">
         <h4>Legal</h4>
         <ul>
-          <li><a href="#terminos-condiciones">Términos y condiciones</a></li>
+          <li className="footer-li"><a href="#terminos-condiciones">Términos y condiciones</a></li>
           <li><a href="#politica-privacidad">Política de privacidad</a></li>
           <li><a href="#uso-cookies">Uso de cookies</a></li>
           <li><a href="#derechos-autor">Derechos de autor</a></li>
