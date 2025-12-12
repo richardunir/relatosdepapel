@@ -72,22 +72,22 @@ export function MainContent() {
       <section className="features">
         <div className="feature-item">
           <img src={bookImage} alt="Icono de libro" />
-          <h3>Amplio catálogo</h3> 
+          <h3 className="feature-title">Amplio catálogo</h3> 
           <p>Miles de títulos en todos los géneros literarios</p>
         </div>
         <div className="feature-item">
           <img src={carImage} alt="Icono de coche de reparto" />
-          <h3>Envíos Gratis</h3>
+          <h3 className="feature-title">Envíos Gratis</h3>
           <p>En compras superiores a $50</p>
         </div>
         <div className="feature-item">
           <img src={cardImage} alt="Icono de tarjeta de crédito" />
-          <h3>Pagos Seguros</h3>
+          <h3 className="feature-title">Pagos Seguros</h3>
           <p>Múltiples métodos de pago disponibles</p>
         </div>
         <div className="feature-item">
           <img src={supportImage} alt="Icono de soporte al cliente" />
-          <h3>Soporte 24/7</h3>
+          <h3 className="feature-title">Soporte 24/7</h3>
           <p>Estamos aquí para ayudarte siempre</p>
         </div>
       </section>
@@ -139,7 +139,7 @@ export function MainContent() {
           </div>
         </article>
       </section>
-      <button>Ver todos los libros</button>
+      <button className="button-allbooks">Ver todos los libros</button>
     </main>
   );
 }
@@ -147,8 +147,8 @@ export function MainContent() {
 export function EmailSubscription() {
   return (
     <div className="email-subscription" aria-labelledby="newsletter-title">
-      <img src={emailImage} alt="Icono de sobre de correo" />
-      <h2>Suscríbete a nuestro newsletter</h2>
+      <img className="image-email" src={emailImage} alt="Icono de sobre de correo" />
+      <h2 className="title-suscribe">Suscríbete a nuestro newsletter</h2>
       <p id="newsletter-title">Recibe las últimas novedades y ofertas exclusivas
         y recomendaciones personalizadas directamente en tu correo.</p>
       <label htmlFor="email-input" className="email-input"></label>
@@ -166,31 +166,30 @@ export function Footer() {
         <p className="footer-paragraph">Tu librería digital para descubrir, comprar y vivir <br/> nuevas historias</p>
       </div>
       <div className="footer-owns">
-        <h4>Sobre Nosotros</h4>
-        {/* Los enlaces en el pie de página deben ser listas para mejor semántica. */}
+        <h4 className="footer-li">Sobre Nosotros</h4>
         <ul>
-          <li><a href="#quienes-somos">Quiénes somos</a></li>
-          <li><a href="#nuestra-mision">Nuestra misión</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#prensa">Prensa</a></li>
+          <li className="footer-li"><a href="#quienes-somos">Quiénes somos</a></li>
+          <li className="footer-li"><a href="#nuestra-mision">Nuestra misión</a></li>
+          <li className="footer-li"><a href="#blog">Blog</a></li>
+          <li className="footer-li"><a href="#prensa">Prensa</a></li>
         </ul>
       </div>
       <div className="footer-help">
         <h4>Ayuda</h4>
         <ul>
           <li className="footer-li"><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="#devoluciones">Devoluciones</a></li>
-          <li><a href="#soporte">Soporte</a></li>
+          <li className="footer-li"><a href="#contacto">Contacto</a></li>
+          <li className="footer-li"><a href="#devoluciones">Devoluciones</a></li>
+          <li className="footer-li"><a href="#soporte">Soporte</a></li>
         </ul>
       </div>
       <div className="footer-legal">
         <h4>Legal</h4>
         <ul>
           <li className="footer-li"><a href="#terminos-condiciones">Términos y condiciones</a></li>
-          <li><a href="#politica-privacidad">Política de privacidad</a></li>
-          <li><a href="#uso-cookies">Uso de cookies</a></li>
-          <li><a href="#derechos-autor">Derechos de autor</a></li>
+          <li className="footer-li"><a href="#politica-privacidad">Política de privacidad</a></li>
+          <li className="footer-li"><a href="#uso-cookies">Uso de cookies</a></li>
+          <li className="footer-li"><a href="#derechos-autor">Derechos de autor</a></li>
         </ul>
       </div>
     </footer>
