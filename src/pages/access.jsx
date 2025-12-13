@@ -8,7 +8,7 @@ import bookSusurro from "../assets/susurro.png";
 import bookCronicas from "../assets/cronicas.png";
 import bookMisterios from "../assets/misterios.png";
 import bookAmor from "../assets/amor.png";
-import emailImage from "../assets/email2.png";
+import emailImage from "../assets/email.png";
 
 function Access() {
   return (
@@ -62,12 +62,12 @@ export function HeroSection() {
           títulos esperando por ti.
         </p>
         <div className="hero-buttons">
-          <button className="button-style" type="button">Explorar Libreria</button>
-          <button className="button-style" type="button">Ver Novedades</button>
+          <button className="button-explore" type="button">Explorar Libreria</button>
+          <button className="button-news" type="button">Ver Novedades</button>
         </div>
         <div className="hero-stats">
           <p className="number">5000+</p>
-          <p className="text">Libros disponibles</p>|
+          <p className="text">Libros disponibles</p>
           <p className="number">10000+</p>
           <p className="text">Lectores felices</p>
         </div>
@@ -174,11 +174,11 @@ export function EmailSubscription() {
     <div className="email-subscription" aria-labelledby="newsletter-title">
       <img className="image-email" src={emailImage} alt="Icono de sobre de correo" />
       <h2 className="title-suscribe">Suscríbete a nuestro newsletter</h2>
-      <p id="newsletter-title">Recibe las últimas novedades y ofertas exclusivas
-        y recomendaciones personalizadas directamente en tu correo.</p>
-      <label htmlFor="email-input" className="email-input"></label>
-      <input type="email" id="email-input" placeholder="tucorreo@email.com" aria-label="Introduce tu correo electrónico"/>
-      <button className="button-suscribe" type="submit"> Suscribirse </button>
+      <p id="newsletter-title">Recibe las últimas novedades y ofertas exclusivas y recomendaciones personalizadas directamente en tu correo.</p>
+      <div className="subscription-form">
+        <input type="email" id="email-input" placeholder="tucorreo@email.com" aria-label="Introduce tu correo electrónico"/>
+        <button className="button-suscribe" type="submit"> Suscribirse </button>
+      </div>  
     </div>
   );
 }
@@ -200,7 +200,7 @@ export function Footer() {
         </ul>
       </div>
       <div className="footer-help">
-        <h4>Ayuda</h4>
+        <h4 className="footer-li">Ayuda</h4>
         <ul>
           <li className="footer-li"><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
           <li className="footer-li"><a href="#contacto">Contacto</a></li>
@@ -209,7 +209,7 @@ export function Footer() {
         </ul>
       </div>
       <div className="footer-legal">
-        <h4>Legal</h4>
+        <h4 className="footer-li">Legal</h4>
         <ul>
           <li className="footer-li"><a href="#terminos-condiciones">Términos y condiciones</a></li>
           <li className="footer-li"><a href="#politica-privacidad">Política de privacidad</a></li>

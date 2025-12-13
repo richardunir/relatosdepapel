@@ -38,8 +38,9 @@ li,
   justify-content: space-between;
   text-align: center;
   margin-left: 2%;
-  margin-top: 2%;
+  margin-top: 4%;
   margin-right: 2%;
+  margin-bottom: 4%;
 }
 
 .navbar-header {
@@ -62,7 +63,7 @@ li,
 #hero-title, 
 #hero-paragraph,
 .button-explore {
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
 
 .hero-text{
@@ -71,6 +72,11 @@ li,
   position: absolute;
   margin-left: 3%;
   margin-top: 12%;
+}
+
+.hero-buttons{
+  display: flex;
+  gap: 4%;
 }
 
 .button-explore{
@@ -107,10 +113,12 @@ li,
 
 .number{
   margin-bottom: 0;
+  margin-right: -9%;
 }
 
 .text{
   margin-top: 4%;
+  margin-right: 16%;
 }
 
 .button-suscribe{
@@ -124,9 +132,19 @@ li,
 .button-allbooks,
 .image-email,
 .title-suscribe,
-.featured,
 #email-input {
   margin-top: 2%;
+}
+
+.featured{
+  margin-top: 2%;
+}
+
+.title-suscribe,
+.featured,
+#hero-title,
+#main-content {
+  font-weight: bold;
 }
 
 .book-price{
@@ -166,42 +184,64 @@ text-align: start;
   padding-top: 0.6%;
 }
 
-.button-style{
-  border-radius: 10%;
-  background: #fafafa;
-  display: flex;
-  width: 28%;
-  padding: 2.1% 5% 2.1% 4.28%;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6%;
+.button-explore{
+display: flex;
+padding: 4% 6% 4% 7%;
+justify-content: center;
+align-items: center;
+border-radius: 1rem;
+background: #000;
+color: #fafafa;
+}
+
+.button-news{
+display: flex;
+padding: 4% 4% 4% 5%;
+justify-content: center;
+align-items: center;
+width: 30%;
+border-radius: 1rem;
+background: #fafafa;
+border: 0.15rem solid #000;
+color: #000000;
+height: 6%;
 }
 
 .button-all{
-  border-radius: 10%;
-  background: #fafafa;
-  display: flex;
-  width: 10%;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6%;
-  margin-top: 4%;
-  margin-left: 45%;
+display: flex;
+padding: 1% 2% 1% 2%;
+border-radius: 1rem;
+background: #000;
+color: #fafafa;
+margin-top: 4%;
+margin-left: 45%;
 }
 
 .button-suscribe{
-  border-radius: 10%;
+  border-radius: 1rem;
   background: #fafafa;
   display: flex;
-  width: 10%;
   justify-content: center;
   align-items: center;
-  gap: 1.6%;
-  margin-left: 45%;
+  margin-left: 55%;
+  padding: 1% 3% 1% 3%;
+  margin: -3% 1% 2% 54%;
 }
 
 .image-cart {
  margin-left: 32%;
+}
+
+#email-input {
+  border-radius: 1rem;
+  padding: 1% 8% 1% 1%;
+  margin: 2% 16% 0% 0%;
+}
+
+.suscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
 }
 
 .footer-owns,
@@ -213,12 +253,14 @@ text-align: start;
 
 .footer-title{
   padding-bottom: 4%;
+  font-weight: bold;
 }
 
 .footer-li{
   margin: 2% 0%;
   padding-top: 3%;
   padding-bottom: 3%;
+  font-weight: bold;
 }
 
 .footer-help{
