@@ -10,7 +10,44 @@ import bookMisterios from "../assets/misterios.png";
 import bookAmor from "../assets/amor.png";
 import emailImage from "../assets/email.png";
 
+import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Access() {
+
+  const nav = useNavigate();
+  const timeOut =useRef(null);
+
+  useEffect(() => {
+    const events = ['mousemove', 'keydown', 'scroll', 'touchstart', 'mousedown', 'keypress', 'click'];
+
+    const resetTimeout = () => {
+      if (timeOut.current) {
+        clearTimeout(timeOut.current);
+      }
+
+      timeOut.current = setTimeout(() => {
+        nav('/');
+      }, 5000);
+    };
+
+    events.forEach((event) => {
+      window.addEventListener(event, resetTimeout);
+    });
+
+    resetTimeout();
+
+    return () => {
+      events.forEach((event) => {
+        window.removeEventListener(event, resetTimeout);
+      });
+
+      if (timeOut.current) {
+        clearTimeout(timeOut.current);
+      }
+    };
+  }, [nav]);
+
   return (
     <div className="components-access">
       <Header/>

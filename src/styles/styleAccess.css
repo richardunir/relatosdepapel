@@ -55,6 +55,11 @@ li,
   display: flex;
 }
 
+.hero-section, 
+.email-subscription {
+  background: rgba(255, 251, 235, 0.75);
+}
+
 .main-content {
   padding: 1%;
   padding-top: 2%;
@@ -274,4 +279,164 @@ margin-left: 45%;
 
 .footer{
   padding-top: 2%;
+}
+
+.footer-li{
+  margin: 2% 0%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-weight: bold;
+}
+
+.footer-help{
+  margin-left: 18%;
+  margin-right: 14%;
+}
+
+.footer-relatos {
+  margin-left: 2%;
+}
+
+.footer{
+  padding-top: 2%;
+}
+
+/* --- Media Queries para Responsive Design --- */
+/* --- Estilos para tablet (768px y menos) --- */
+@media (max-width: 768px) {
+  .navbar-header {
+    justify-content: space-around;
+  }
+  
+  /* Menu burguer  */
+  .menu-home,
+  .menu-categories,
+  .menu-feaures,
+  .menu-sell,
+  .menu-contact {
+    display: none;
+  }
+
+  .logo {
+    padding-right: 0;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .hero-text {
+    position: static;
+    margin: 0;
+    text-align: center;
+    order: 1; 
+  }
+
+  #hero-title,
+  #hero-paragraph,
+  .hero-buttons {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .image-library {
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+    order: 0;
+  }
+
+  .image-hero {
+    margin: 0;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .book-detail {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .features,
+  .books {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature-item,
+  .book-card {
+    flex-basis: 45%;
+  }
+  
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-relatos,
+  .footer-owns,
+  .footer-help, 
+  .footer-legal {
+    flex-basis: 45%;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+   .footer-title,
+   .footer-paragraph {
+      text-align: center;
+   }
+}
+
+/* --- Estilos para cel (480px y menos) --- */
+@media (max-width: 480px) {
+    .features,
+    .books, 
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .feature-item,
+    .book-card {
+      flex-basis: 90%; 
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .button-news {
+      width: 60%;
+    }
+
+    .button-all {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .subscription-form {
+      align-items: center;
+    }
+    
+    #email-input {
+      width: 90%;
+      text-align: center;
+      padding: 3%;
+      margin: 2% 0;
+    }
+
+    .button-suscribe {
+      position: static;
+      margin: 2% 0;
+      width: 60%;
+    }
+
+    .image-cart {
+      margin-left: 1rem;
+    }
 }
