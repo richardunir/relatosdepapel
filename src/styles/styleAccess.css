@@ -5,11 +5,13 @@
   list-style: none;
 }
 
-h2,p,div {
+h2,
+p,
+div {
   text-align: center;
 }
 
-a{
+a {
   text-decoration: none;
   color: #000000;
 }
@@ -55,7 +57,7 @@ li,
   display: flex;
 }
 
-.hero-section, 
+.hero-section,
 .email-subscription {
   background: rgba(255, 251, 235, 0.75);
 }
@@ -65,13 +67,13 @@ li,
   padding-top: 2%;
 }
 
-#hero-title, 
+#hero-title,
 #hero-paragraph,
 .button-explore {
   margin-bottom: 4%;
 }
 
-.hero-text{
+.hero-text {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -79,25 +81,25 @@ li,
   margin-top: 12%;
 }
 
-.hero-buttons{
+.hero-buttons {
   display: flex;
   gap: 4%;
 }
 
-.button-explore{
+.button-explore {
   margin-right: 3%;
 }
 
-.logo{
+.logo {
   padding-right: 6%;
 }
 
-.feature-title{
+.feature-title {
   padding-bottom: 4%;
 }
 
 .menu-contact,
-.logo{
+.logo {
   padding-right: 20%;
 }
 
@@ -116,21 +118,21 @@ li,
   margin-top: 12%;
 }
 
-.number{
+.number {
   margin-bottom: 0;
   margin-right: -9%;
 }
 
-.text{
+.text {
   margin-top: 4%;
   margin-right: 16%;
 }
 
-.button-suscribe{
+.button-suscribe {
   margin-left: 1%;
 }
 
-.book-description{
+.book-description {
   padding-bottom: 4%;
 }
 
@@ -141,7 +143,7 @@ li,
   margin-top: 2%;
 }
 
-.featured{
+.featured {
   margin-top: 2%;
 }
 
@@ -152,11 +154,11 @@ li,
   font-weight: bold;
 }
 
-.book-price{
+.book-price {
   margin-top: 4%;
 }
 
-.book-rating{
+.book-rating {
   margin-top: 2%;
 }
 
@@ -166,7 +168,7 @@ li,
   background-color: rgba(255, 255, 255, 0.8);
   padding: 3% 5%;
   border-radius: 8%;
-  box-shadow: 0 1% 1.2% rgba(0,0,0,0.1);
+  box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
@@ -176,7 +178,7 @@ li,
 .book-description,
 .book-author,
 .book-rating {
-text-align: start;
+  text-align: start;
 }
 
 .button-profile,
@@ -185,44 +187,44 @@ text-align: start;
   padding-right: 1%;
 }
 
-.button-cart{
+.button-cart {
   padding-top: 0.6%;
 }
 
-.button-explore{
-display: flex;
-padding: 4% 6% 4% 7%;
-justify-content: center;
-align-items: center;
-border-radius: 1rem;
-background: #000;
-color: #fafafa;
+.button-explore {
+  display: flex;
+  padding: 4% 6% 4% 7%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background: #000;
+  color: #fafafa;
 }
 
-.button-news{
-display: flex;
-padding: 4% 4% 4% 5%;
-justify-content: center;
-align-items: center;
-width: 30%;
-border-radius: 1rem;
-background: #fafafa;
-border: 0.15rem solid #000;
-color: #000000;
-height: 6%;
+.button-news {
+  display: flex;
+  padding: 4% 4% 4% 5%;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border-radius: 1rem;
+  background: #fafafa;
+  border: 0.15rem solid #000;
+  color: #000000;
+  height: 6%;
 }
 
-.button-all{
-display: flex;
-padding: 1% 2% 1% 2%;
-border-radius: 1rem;
-background: #000;
-color: #fafafa;
-margin-top: 4%;
-margin-left: 45%;
+.button-all {
+  display: flex;
+  padding: 1% 2% 1% 2%;
+  border-radius: 1rem;
+  background: #000;
+  color: #fafafa;
+  margin-top: 4%;
+  margin-left: 45%;
 }
 
-.button-suscribe{
+.button-suscribe {
   border-radius: 1rem;
   background: #fafafa;
   display: flex;
@@ -234,7 +236,7 @@ margin-left: 45%;
 }
 
 .image-cart {
- margin-left: 32%;
+  margin-left: 32%;
 }
 
 #email-input {
@@ -256,19 +258,19 @@ margin-left: 45%;
   margin-left: 8%;
 }
 
-.footer-title{
+.footer-title {
   padding-bottom: 4%;
   font-weight: bold;
 }
 
-.footer-li{
+.footer-li {
   margin: 2% 0%;
   padding-top: 3%;
   padding-bottom: 3%;
   font-weight: bold;
 }
 
-.footer-help{
+.footer-help {
   margin-left: 18%;
   margin-right: 14%;
 }
@@ -277,18 +279,18 @@ margin-left: 45%;
   margin-left: 2%;
 }
 
-.footer{
+.footer {
   padding-top: 2%;
 }
 
-.footer-li{
+.footer-li {
   margin: 2% 0%;
   padding-top: 3%;
   padding-bottom: 3%;
   font-weight: bold;
 }
 
-.footer-help{
+.footer-help {
   margin-left: 18%;
   margin-right: 14%;
 }
@@ -297,7 +299,7 @@ margin-left: 45%;
   margin-left: 2%;
 }
 
-.footer{
+.footer {
   padding-top: 2%;
 }
 
@@ -307,7 +309,7 @@ margin-left: 45%;
   .navbar-header {
     justify-content: space-around;
   }
-  
+
   /* Menu burguer  */
   .menu-home,
   .menu-categories,
@@ -331,7 +333,7 @@ margin-left: 45%;
     position: static;
     margin: 0;
     text-align: center;
-    order: 1; 
+    order: 1;
   }
 
   #hero-title,
@@ -346,6 +348,7 @@ margin-left: 45%;
     justify-content: center;
     width: 100%;
     order: 0;
+    margin-bottom: 4%;
   }
 
   .image-hero {
@@ -353,10 +356,41 @@ margin-left: 45%;
     width: 80%;
     max-width: 400px;
   }
-  
+
   .book-detail {
     position: static;
     margin-top: 1rem;
+  }
+
+  .button-suscribe {
+    border-radius: 1rem;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55%;
+    padding: 1% 3% 1% 3%;
+    margin: -4.6% 2% 2% 60%;
+  }
+
+  .button-all {
+    display: flex;
+    padding: 1% 2% 1% 2%;
+    border-radius: 1rem;
+    background: #000;
+    color: #fafafa;
+    margin-top: 4%;
+    margin-left: 39%;
+  }
+
+  .book-detail {
+    position: absolute;
+    top: 66%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3% 5%;
+    border-radius: 8%;
+    box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
+    z-index: 10;
   }
 
   .features,
@@ -369,7 +403,7 @@ margin-left: 45%;
   .book-card {
     flex-basis: 45%;
   }
-  
+
   .footer {
     flex-wrap: wrap;
     justify-content: center;
@@ -378,65 +412,92 @@ margin-left: 45%;
 
   .footer-relatos,
   .footer-owns,
-  .footer-help, 
+  .footer-help,
   .footer-legal {
     flex-basis: 45%;
     margin: 1rem 0;
     text-align: center;
   }
 
-   .footer-title,
-   .footer-paragraph {
-      text-align: center;
-   }
+  .footer-title,
+  .footer-paragraph {
+    text-align: center;
+  }
 }
 
 /* --- Estilos para cel (480px y menos) --- */
 @media (max-width: 480px) {
-    .features,
-    .books, 
-    .footer {
-      flex-direction: column;
-      align-items: center;
-    }
+  .features,
+  .books,
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .feature-item,
-    .book-card {
-      flex-basis: 90%; 
-    }
+  .feature-item,
+  .book-card {
+    flex-basis: 90%;
+  }
 
-    .hero-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .button-news {
-      width: 60%;
-    }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .button-all {
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .button-news {
+    width: 60%;
+    margin-bottom: 8%;
+  }
 
-    .subscription-form {
-      align-items: center;
-    }
-    
-    #email-input {
-      width: 90%;
-      text-align: center;
-      padding: 3%;
-      margin: 2% 0;
-    }
+  .button-all {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .button-suscribe {
-      position: static;
-      margin: 2% 0;
-      width: 60%;
-    }
+  .subscription-form {
+    align-items: center;
+  }
 
-    .image-cart {
-      margin-left: 1rem;
-    }
+  #email-input {
+    width: 90%;
+    text-align: center;
+    padding: 3%;
+    margin: 2% 0;
+  }
+
+  .button-suscribe {
+    position: static;
+    margin: 2% 0;
+    width: 60%;
+  }
+
+  .image-cart {
+    margin-left: 1rem;
+  }
+
+  .book-detail {
+    position: absolute;
+    top: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3% 5%;
+    border-radius: 8%;
+    box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .button-suscribe {
+    border-radius: 1rem;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55%;
+    padding: 1% 3% 1% 3%;
+    margin: 0.4% 2% 2% 19%;
+  }
+
+  .number {
+    margin-bottom: 0;
+    margin-right: -18%;
+  }
 }

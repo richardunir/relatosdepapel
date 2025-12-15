@@ -9,7 +9,6 @@ import bookCronicas from "../assets/cronicas.png";
 import bookMisterios from "../assets/misterios.png";
 import bookAmor from "../assets/amor.png";
 import emailImage from "../assets/email.png";
-
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
