@@ -5,25 +5,22 @@
   list-style: none;
 }
 
-h2,p,div {
+h2,
+p,
+div {
   text-align: center;
 }
 
-h4 {
-margin-left: 8%;
-}
-
-a{
+a {
   text-decoration: none;
   color: #000000;
 }
 
 li,
 .featured,
-#pitemfeature,
 #newsletter-title,
 .footer {
-  margin: 12px 16px;
+  margin: 1% 1.2%;
 }
 
 #hero-title,
@@ -43,17 +40,16 @@ li,
   justify-content: space-between;
   text-align: center;
   margin-left: 2%;
+  margin-top: 4%;
+  margin-right: 2%;
+  margin-bottom: 4%;
 }
 
 .navbar-header {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-left: 2%;
-}
-
-.logo {
-  margin-left: 4%;
+  margin-top: 0.4%;
 }
 
 .hero-stats,
@@ -61,22 +57,447 @@ li,
   display: flex;
 }
 
-
-.main-content {
-  padding: 20px;
+.hero-section,
+.email-subscription {
+  background: rgba(255, 251, 235, 0.75);
 }
 
-.hero-text{
+.main-content {
+  padding: 1%;
+  padding-top: 2%;
+}
+
+#hero-title,
+#hero-paragraph,
+.button-explore {
+  margin-bottom: 4%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
   margin-left: 3%;
+  margin-top: 12%;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 4%;
+}
+
+.button-explore {
+  margin-right: 3%;
+}
+
+.logo {
+  padding-right: 6%;
+}
+
+.feature-title {
+  padding-bottom: 4%;
+}
+
+.menu-contact,
+.logo {
+  padding-right: 20%;
+}
+
+.image-library {
+  justify-content: flex-end;
+  position: relative;
+  display: inline-block;
+  margin-left: 64%;
+}
+
+.image-hero {
+  height: auto;
+  display: block;
+  border-radius: 3%;
+  margin-right: 3%;
+  margin-top: 12%;
+}
+
+.number {
+  margin-bottom: 0;
+  margin-right: -9%;
+}
+
+.text {
+  margin-top: 4%;
+  margin-right: 16%;
+}
+
+.button-suscribe {
+  margin-left: 1%;
+}
+
+.book-description {
+  padding-bottom: 4%;
+}
+
+.button-allbooks,
+.image-email,
+.title-suscribe,
+#email-input {
+  margin-top: 2%;
+}
+
+.featured {
+  margin-top: 2%;
+}
+
+.title-suscribe,
+.featured,
+#hero-title,
+#main-content {
+  font-weight: bold;
+}
+
+.book-price {
+  margin-top: 4%;
+}
+
+.book-rating {
+  margin-top: 2%;
+}
+
+.book-detail {
+  position: absolute;
+  top: 84%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3% 5%;
+  border-radius: 8%;
+  box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.book-month,
+.book-title,
+.book-stars,
+.book-description,
+.book-author,
+.book-rating {
+  text-align: start;
+}
+
+.button-profile,
+.button-search {
+  padding-top: 1%;
+  padding-right: 1%;
+}
+
+.button-cart {
+  padding-top: 0.6%;
+}
+
+.button-explore {
+  display: flex;
+  padding: 4% 6% 4% 7%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background: #000;
+  color: #fafafa;
+}
+
+.button-news {
+  display: flex;
+  padding: 4% 4% 4% 5%;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border-radius: 1rem;
+  background: #fafafa;
+  border: 0.15rem solid #000;
+  color: #000000;
+  height: 6%;
+}
+
+.button-all {
+  display: flex;
+  padding: 1% 2% 1% 2%;
+  border-radius: 1rem;
+  background: #000;
+  color: #fafafa;
+  margin-top: 4%;
+  margin-left: 45%;
+}
+
+.button-suscribe {
+  border-radius: 1rem;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 55%;
+  padding: 1% 3% 1% 3%;
+  margin: -3% 1% 2% 54%;
+}
+
+.image-cart {
+  margin-left: 32%;
+}
+
+#email-input {
+  border-radius: 1rem;
+  padding: 1% 8% 1% 1%;
+  margin: 2% 16% 0% 0%;
+}
+
+.suscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
 }
 
 .footer-owns,
 .footer-help,
 .footer-legal {
+  text-align: start;
   margin-left: 8%;
-  text-align: left;
+}
+
+.footer-title {
+  padding-bottom: 4%;
+  font-weight: bold;
+}
+
+.footer-li {
+  margin: 2% 0%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-weight: bold;
+}
+
+.footer-help {
+  margin-left: 18%;
+  margin-right: 14%;
 }
 
 .footer-relatos {
   margin-left: 2%;
+}
+
+.footer {
+  padding-top: 2%;
+}
+
+.footer-li {
+  margin: 2% 0%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-weight: bold;
+}
+
+.footer-help {
+  margin-left: 18%;
+  margin-right: 14%;
+}
+
+.footer-relatos {
+  margin-left: 2%;
+}
+
+.footer {
+  padding-top: 2%;
+}
+
+/* --- Media Queries para Responsive Design --- */
+/* --- Estilos para tablet (768px y menos) --- */
+@media (max-width: 768px) {
+  .navbar-header {
+    justify-content: space-around;
+  }
+
+  /* Menu burguer  */
+  .menu-home,
+  .menu-categories,
+  .menu-feaures,
+  .menu-sell,
+  .menu-contact {
+    display: none;
+  }
+
+  .logo {
+    padding-right: 0;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .hero-text {
+    position: static;
+    margin: 0;
+    text-align: center;
+    order: 1;
+  }
+
+  #hero-title,
+  #hero-paragraph,
+  .hero-buttons {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .image-library {
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+    order: 0;
+    margin-bottom: 4%;
+  }
+
+  .image-hero {
+    margin: 0;
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .book-detail {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .button-suscribe {
+    border-radius: 1rem;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55%;
+    padding: 1% 3% 1% 3%;
+    margin: -4.6% 2% 2% 60%;
+  }
+
+  .button-all {
+    display: flex;
+    padding: 1% 2% 1% 2%;
+    border-radius: 1rem;
+    background: #000;
+    color: #fafafa;
+    margin-top: 4%;
+    margin-left: 39%;
+  }
+
+  .book-detail {
+    position: absolute;
+    top: 66%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3% 5%;
+    border-radius: 8%;
+    box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .features,
+  .books {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature-item,
+  .book-card {
+    flex-basis: 45%;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-relatos,
+  .footer-owns,
+  .footer-help,
+  .footer-legal {
+    flex-basis: 45%;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .footer-title,
+  .footer-paragraph {
+    text-align: center;
+  }
+}
+
+/* --- Estilos para cel (480px y menos) --- */
+@media (max-width: 480px) {
+  .features,
+  .books,
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item,
+  .book-card {
+    flex-basis: 90%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-news {
+    width: 60%;
+    margin-bottom: 8%;
+  }
+
+  .button-all {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subscription-form {
+    align-items: center;
+  }
+
+  #email-input {
+    width: 90%;
+    text-align: center;
+    padding: 3%;
+    margin: 2% 0;
+  }
+
+  .button-suscribe {
+    position: static;
+    margin: 2% 0;
+    width: 60%;
+  }
+
+  .image-cart {
+    margin-left: 1rem;
+  }
+
+  .book-detail {
+    position: absolute;
+    top: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3% 5%;
+    border-radius: 8%;
+    box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .button-suscribe {
+    border-radius: 1rem;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55%;
+    padding: 1% 3% 1% 3%;
+    margin: 0.4% 2% 2% 19%;
+  }
+
+  .number {
+    margin-bottom: 0;
+    margin-right: -18%;
+  }
 }
