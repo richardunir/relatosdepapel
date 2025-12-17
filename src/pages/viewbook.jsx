@@ -130,37 +130,39 @@ export default function Viewbook() {
             <HeaderLibro />
             <DetalleLibroSection />
             <LibrosDestacadosSection />
-                <footer className="vista-footer">
-                    <div>
-                        <h4>Sobre Nosotros</h4>
-                        <ul>
-                            <li>Quiénes somos</li>
-                            <li>Nuestra misión</li>
-                            <li>Blog</li>
-                            <li>Prensa</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4>Ayuda</h4>
-                        <ul>
-                            <li>Preguntas frecuentes</li>
-                            <li>Contacto</li>
-                            <li>Devoluciones</li>
-                            <li>Soporte</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4>Legal</h4>
-                        <ul>
-                            <li>Términos y condiciones</li>
-                            <li>Política de privacidad</li>
-                            <li>Uso de cookies</li>
-                            <li>Derechos de autor</li>
-                        </ul>
-                    </div>
-                </footer>
+            <footer className="footer">
+                <div className="footer-relatos">
+                    <h3 className="footer-title">Relatos de Papel</h3>
+                    <p className="footer-paragraph">Tu librería digital para descubrir, comprar y vivir <br /> nuevas historias</p>
+                </div>
+                <div className="footer-owns">
+                    <h4 className="footer-li">Sobre Nosotros</h4>
+                    <ul>
+                        <li className="footer-li"><a href="#quienes-somos">Quiénes somos</a></li>
+                        <li className="footer-li"><a href="#nuestra-mision">Nuestra misión</a></li>
+                        <li className="footer-li"><a href="#blog">Blog</a></li>
+                        <li className="footer-li"><a href="#prensa">Prensa</a></li>
+                    </ul>
+                </div>
+                <div className="footer-help">
+                    <h4 className="footer-li">Ayuda</h4>
+                    <ul>
+                        <li className="footer-li"><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+                        <li className="footer-li"><a href="#contacto">Contacto</a></li>
+                        <li className="footer-li"><a href="#devoluciones">Devoluciones</a></li>
+                        <li className="footer-li"><a href="#soporte">Soporte</a></li>
+                    </ul>
+                </div>
+                <div className="footer-legal">
+                    <h4 className="footer-li">Legal</h4>
+                    <ul>
+                        <li className="footer-li"><a href="#terminos-condiciones">Términos y condiciones</a></li>
+                        <li className="footer-li"><a href="#politica-privacidad">Política de privacidad</a></li>
+                        <li className="footer-li"><a href="#uso-cookies">Uso de cookies</a></li>
+                        <li className="footer-li"><a href="#derechos-autor">Derechos de autor</a></li>
+                    </ul>
+                </div>
+            </footer>
 
             <section className="copyright-libro">
                 <p>© 2025 Relatos de Papel. Todos los derechos reservados. - Grupo 40 UNIR</p>
