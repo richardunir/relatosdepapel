@@ -1,5 +1,5 @@
 import "../styles/styleAccess.css";
-import accessImage from "../assets/accessSection.png"; 
+import accessImage from "../assets/accessSection.png";
 import bookImage from "../assets/book.png";
 import carImage from "../assets/car.png";
 import cardImage from "../assets/card.png";
@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 function Access() {
 
   const nav = useNavigate();
-  const timeOut =useRef(null);
+  const timeOut = useRef(null);
 
   useEffect(() => {
     const events = ['mousemove', 'keydown', 'scroll', 'touchstart', 'mousedown', 'keypress', 'click'];
@@ -49,12 +49,12 @@ function Access() {
 
   return (
     <div className="components-access">
-      <Header/>
-      <HeroSection/>
-      <MainContent/>
-      <EmailSubscription/>
-      <Footer/>
-      <Copyright/>
+      <Header />
+      <HeroSection />
+      <MainContent />
+      <EmailSubscription />
+      <Footer />
+      <Copyright />
     </div>
   );
 }
@@ -65,24 +65,24 @@ export function Header() {
     <header>
       <nav aria-label="Navegación principal"> {/* Aria-label se usa para accesibilidad*/}
         <ul className="navbar-header">
-          <li className="logo"><a href="/">Relatos de papel</a></li> 
+          <li className="logo"><a href="/">Relatos de papel</a></li>
 
           <li className="menu-home"><a href="#inicio">Inicio</a></li>
           <li className="menu-categories"><a href="#categorias">Categorias</a></li>
           <li className="menu-feaures"><a href="#novedades">Novedades</a></li>
           <li className="menu-sell"><a href="#mas-vendidos">Más Vendidos</a></li>
           <li className="menu-contact"><a href="#sobre-nosotros">Sobre nosotros</a></li>
-          
+
           <a className="button-search" href="/search">
-           <img src="/src/assets/search.png"/>
+            <img src="/src/assets/search.png" />
           </a>
-           <a className="button-profile" href="/profile">
-           <img src="/src/assets/profile.png"/>
+          <a className="button-profile" href="/profile">
+            <img src="/src/assets/profile.png" />
           </a>
-           <a className="button-cart" href="/cart">
-           <img src="/src/assets/carrito.png"/>
+          <a className="button-cart" href="/cart">
+            <img src="/src/assets/carrito.png" />
           </a>
-          
+
         </ul>
       </nav>
     </header>
@@ -129,7 +129,7 @@ export function MainContent() {
       <section className="features">
         <div className="feature-item">
           <img src={bookImage} alt="Icono de libro" />
-          <h3 className="feature-title">Amplio catálogo</h3> 
+          <h3 className="feature-title">Amplio catálogo</h3>
           <p>Miles de títulos en todos los géneros literarios</p>
         </div>
         <div className="feature-item">
@@ -151,7 +151,7 @@ export function MainContent() {
 
       <h2 className="featured">Libros destacados</h2>
       <p className="featured"> Cada libro es una puerta. Elige la historia que
-          quieres vivir hoy. </p>
+        quieres vivir hoy. </p>
 
       <section className="books">
         <article className="book-card">
@@ -161,9 +161,9 @@ export function MainContent() {
           <p className="book-rating" aria-label="Valoración: 4.8 de 5 estrellas">⭐⭐⭐⭐⭐ 4.8</p>
           <div className="price-container">
             <p className="book-price">$ 60.000</p>
-              <img className="image-cart" src="/src/assets/iconcart.png"/>
+            <img className="image-cart" src="/src/assets/iconcart.png" />
             <button type="button"> </button>
-          </div>    
+          </div>
         </article>
         <article className="book-card">
           <img src={bookCronicas} alt="Portada del libro Crónicas del tiempo" />
@@ -172,7 +172,7 @@ export function MainContent() {
           <p className="book-rating" aria-label="Valoración: 4.9 de 5 estrellas">⭐⭐⭐⭐⭐ 4.9</p>
           <div className="price-container">
             <p className="book-price">$ 90.000</p>
-              <img className="image-cart" src="/src/assets/iconcart.png"/>
+            <img className="image-cart" src="/src/assets/iconcart.png" />
             <button type="button"></button>
           </div>
         </article>
@@ -183,7 +183,7 @@ export function MainContent() {
           <p className="book-rating" aria-label="Valoración: 4.7 de 5 estrellas">⭐⭐⭐⭐⭐ 4.7</p>
           <div className="price-container">
             <p className="book-price">$ 70.000</p>
-              <img className="image-cart" src="/src/assets/iconcart.png"/>
+            <img className="image-cart" src="/src/assets/iconcart.png" />
             <button type="button"></button>
           </div>
 
@@ -195,12 +195,12 @@ export function MainContent() {
           <p className="book-rating" aria-label="Valoración: 4.6 de 5 estrellas">⭐⭐⭐⭐⭐ 4.6</p>
           <div className="price-container">
             <p className="book-price">$ 80.000</p>
-              <img className="image-cart"  src="/src/assets/iconcart.png"/>
+            <img className="image-cart" src="/src/assets/iconcart.png" />
             <button type="button"></button>
           </div>
         </article>
       </section>
-       <button className="button-all" type="button"> Ver todos los libros </button>
+      <button className="button-all" type="button"> Ver todos los libros </button>
     </main>
   );
 }
@@ -212,9 +212,9 @@ export function EmailSubscription() {
       <h2 className="title-suscribe">Suscríbete a nuestro newsletter</h2>
       <p id="newsletter-title">Recibe las últimas novedades y ofertas exclusivas y recomendaciones personalizadas directamente en tu correo.</p>
       <div className="subscription-form">
-        <input type="email" id="email-input" placeholder="tucorreo@email.com" aria-label="Introduce tu correo electrónico"/>
+        <input type="email" id="email-input" placeholder="tucorreo@email.com" aria-label="Introduce tu correo electrónico" />
         <button className="button-suscribe" type="submit"> Suscribirse </button>
-      </div>  
+      </div>
     </div>
   );
 }
@@ -224,7 +224,7 @@ export function Footer() {
     <footer className="footer">
       <div className="footer-relatos">
         <h3 className="footer-title">Relatos de Papel</h3>
-        <p className="footer-paragraph">Tu librería digital para descubrir, comprar y vivir <br/> nuevas historias</p>
+        <p className="footer-paragraph">Tu librería digital para descubrir, comprar y vivir <br /> nuevas historias</p>
       </div>
       <div className="footer-owns">
         <h4 className="footer-li">Sobre Nosotros</h4>
@@ -257,11 +257,11 @@ export function Footer() {
   );
 }
 
-export function Copyright() { 
+export function Copyright() {
   return (
-  <section>
-  <p>© 2025 Relatos de Papel. Todos los derechos reservados. - Grupo 40 UNIR</p>
-  </section>
-);
+    <section>
+      <p>© 2025 Relatos de Papel. Todos los derechos reservados. - Grupo 40 UNIR</p>
+    </section>
+  );
 }
 

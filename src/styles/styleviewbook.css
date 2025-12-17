@@ -1,108 +1,187 @@
-/* HEADER */
-.header-libro {
+/* ================= HEADER ================= */
+header {
     background: #fff;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e5e5e5;
     padding: 15px 40px;
 }
 
-.navbar-libro {
+.navbar-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 25px;
+    list-style: none;
 }
 
-.search-bar input {
-    width: 300px;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+.navbar-header li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
 }
 
-/* DETALLE DEL LIBRO */
+.logo a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ================= DETALLE LIBRO ================= */
 .detalle-libro {
-    display: flex;
-    padding: 40px;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    gap: 50px;
+    padding: 50px;
+    background: #faf7ef;
 }
 
-.libro-imagen img {
-    width: 250px;
-    height: 350px;
-    background: #ddd;
-    
-}
-
-.libro-info {
-    flex: 1;
-}
-
-.btn-deseos {
-    margin: 10px 0;
-    padding: 8px 12px;
-    background: #eee;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-/* ASIDE COMPRA */
-.compra-box {
-    width: 200px;
-    padding: 20px;
-    background: #f5f5f5;
+/* IMAGEN */
+.detalle-left img {
+    width: 100%;
     border-radius: 8px;
-    height: fit-content;
+}
+
+/* INFO */
+.detalle-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detalle-cabezera {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    line-height: 1.9;
+}
+
+.titulo-libro {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.autor-editorial {
+    color: #666;
+    font-size: 14px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #f39c12;
+}
+
+.descripcion-libro {
+    background: white;
+    text-align: left;
+}
+
+.descripcion {
+    font-size: 18px;
+    line-height: 2.0;
+    color: #333;
+    text-align: left;
+}
+
+/* FICHA */
+.ficha-tecnica {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 2.0;
+}
+
+.ficha-tecnica li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ficha-tecnica li strong{
+    font-weight: 700;
+    min-width: 350px;  
+    text-align: left;
+}
+/* ================= COMPRA ================= */
+.compra-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #eaf3ec;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.stock {
+    font-size: 14px;
+    color: #2c7a2c;
 }
 
 .precio {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
+    margin: 10px 0;
 }
 
 .btn-comprar {
     width: 100%;
     padding: 10px;
-    background: #4CAF50;
-    color: white;
+    background: #2ecc71;
     border: none;
+    color: #fff;
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 6px;
 }
 
-/* DESTACADOS */
+/* ================= DESTACADOS ================= */
 .destacados {
-    padding: 40px;
-    text-align: center;
+    padding: 50px;
+}
+
+.destacados h2 {
+    margin-bottom: 25px;
 }
 
 .destacados-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
 }
 
 .card-destacado {
-    width: 150px;
+    background: #fff;
     padding: 10px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .card-destacado img {
     width: 100%;
-    height: 180px;
-    background: #ddd;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 .btn-vermas {
     margin-top: 10px;
-    padding: 6px 10px;
+    padding: 6px 12px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 .vista-footer {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px;
     background: white;
-    color: #111;
+    border-top: 1px solid #e5e5e5;
+}
+
+.vista-footer h4 {
+    margin-bottom: 10px;
 }
 
 .vista-footer ul {
@@ -110,9 +189,180 @@
     padding: 0;
 }
 
+.vista-footer li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
 .copyright-libro {
     text-align: center;
-    padding: 20px;
-    background: #111;
-    color: white;
+    padding: 15px;
+    background: #fff;
+    color: #111;
+    font-size: 13px;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* ---------- LARGE DESKTOP (≤ 1200px) ---------- */
+@media (max-width: 1200px) {
+
+    .detalle-libro {
+        grid-template-columns: 45% 1fr;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .destacados-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .ficha-tecnica li strong {
+        min-width: 250px;
+    }
+}
+
+/* ---------- TABLET (≤ 992px) ---------- */
+@media (max-width: 992px) {
+
+    /* HEADER */
+    .navbar-header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* DETALLE LIBRO */
+    .detalle-libro {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+    }
+
+    .detalle-left img {
+        max-width: 380px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .detalle-cabezera {
+        align-items: center;
+        text-align: center;
+    }
+
+    .descripcion,
+    .descripcion-libro {
+        text-align: left;
+    }
+
+    .ficha-tecnica li {
+        justify-content: space-between;
+    }
+
+    .ficha-tecnica li strong {
+        min-width: 200px;
+    }
+
+    /* DESTACADOS */
+    .destacados-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* FOOTER */
+    .vista-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        padding: 15px 20px;
+    }
+
+    .navbar-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar-header li {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    /* DETALLE LIBRO */
+    .detalle-libro {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .titulo-libro {
+        font-size: 22px;
+    }
+
+    .descripcion {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .ficha-tecnica {
+        font-size: 16px;
+    }
+
+    .ficha-tecnica li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ficha-tecnica li strong {
+        min-width: auto;
+    }
+
+    /* COMPRA */
+    .compra-box {
+        width: 100%;
+    }
+
+    /* DESTACADOS */
+    .destacados {
+        padding: 30px 20px;
+    }
+
+    .destacados-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FOOTER */
+    .vista-footer {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .copyright-libro {
+        font-size: 12px;
+        padding: 12px;
+    }
+}
+
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    .detalle-left img {
+        max-width: 100%;
+    }
+
+    .destacados-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .precio {
+        font-size: 22px;
+    }
 }
