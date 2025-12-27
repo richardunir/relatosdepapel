@@ -1,0 +1,207 @@
+.container {
+  background: #FFFBEB;
+}
+
+.checkout {
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 70px 16px;
+}
+
+.checkout__steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  gap: 8px;
+}
+
+.checkout__step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout__step--active {
+  background: #000;
+  color: #fff;
+}
+
+.checkout__step-label {
+  font-size: 16px;
+  margin: 0 8px 0 4px;
+}
+
+.checkout__step-separator {
+  width: 48px;
+  height: 2px;
+  background: #000;
+  margin: 0 8px;
+}
+
+.checkout__order-summary {
+  margin-bottom: 32px;
+}
+
+.textLeft{
+  text-align: left;
+}
+
+.checkout__order-details {
+  
+  padding: 20px 24px;
+}
+
+.checkout__order-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.checkout__order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.checkout__order-row--total {
+  margin-top: 12px;
+  font-weight: 700;
+  padding: 8px 0;
+  padding-top: 17px;
+  border-top: 1px solid #99A1AF
+}
+
+.checkout__order-value {
+  font-weight: 500;
+}
+
+.checkout__order-value--red {
+  color: #e53935;
+}
+
+.checkout__order-value--total {
+  
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #E8F5E9;
+  padding: 15px 24px;
+  border-radius: 10px;
+}
+
+.checkout__book-section {
+  margin: 40px 0 32px 0;
+}
+
+.checkout__book-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.checkout__book-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.checkout__book-image {
+  width: 350px;
+  height: 395px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.checkout__book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.checkout__book-name {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.checkout__book-author {
+  font-size: 15px;
+  color: #444;
+}
+
+.checkout__book-price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.checkout__book-price--red {
+  color: #e53935;
+}
+
+.checkout__address-section {
+  margin: 40px 0 32px 0;
+}
+
+.checkout__address-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.checkout__address-details {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.checkout__address-details p{
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.checkout__address-delivery-time {
+  font-size: 13px;
+  color: #444;
+  margin-top: 8px;
+}
+
+.checkout__address-price {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+  text-align: right;
+}
+
+.checkout__address-price--red {
+  color: #e53935;
+}
+
+.checkout__pay {
+  text-align: right;
+}
+
+.checkout__pay-btn {
+  margin-top: 24px;
+  background: #009e60;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 36px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checkout__pay-btn:hover {
+  background: #007a4a;
+}
