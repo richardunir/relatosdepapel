@@ -5,7 +5,7 @@ export default function Header() {
         <ul className="navbar-header">
           <li className="logo"><a href="/">Relatos de papel</a></li>
 
-          <li className="menu-home"><a href="#inicio">Inicio</a></li>
+          <li className="menu-home"><a href="/access">Inicio</a></li>
           <li className="menu-categories"><a href="#categorias">Categorias</a></li>
           <li className="menu-feaures"><a href="#novedades">Novedades</a></li>
           <li className="menu-sell"><a href="#mas-vendidos">Más Vendidos</a></li>
@@ -17,7 +17,7 @@ export default function Header() {
           <a className="button-profile" href="/">
             <img src="/src/assets/profile.png" />
           </a>
-          <a className="button-cart" href="/checkout">
+          <a className="button-cart" href="/carrito">
             <img src="/src/assets/carrito.png" />
           </a>
 
