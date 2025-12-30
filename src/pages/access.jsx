@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useEffect, useRef } from "react";
+// import { useNavigate } from "react-router-dom";
 import "../styles/styleAccess.css";
 import accessImage from "../assets/accessSection.png"; 
 import bookImage from "../assets/book.png";
@@ -14,38 +14,38 @@ import emailImage from "../assets/email.png";
 
 function Access() {
 
-  const nav = useNavigate();
-  const timeOut = useRef(null);
+  // const nav = useNavigate();
+  // const timeOut = useRef(null);
 
-  useEffect(() => {
-    const events = ['mousemove', 'keydown', 'scroll', 'touchstart', 'mousedown', 'keypress', 'click'];
+  // useEffect(() => {
+  //   const events = ['mousemove', 'keydown', 'scroll', 'touchstart', 'mousedown', 'keypress', 'click'];
 
-    const resetTimeout = () => {
-      if (timeOut.current) {
-        clearTimeout(timeOut.current);
-      }
+  //   const resetTimeout = () => {
+  //     if (timeOut.current) {
+  //       clearTimeout(timeOut.current);
+  //     }
 
-      timeOut.current = setTimeout(() => {
-        nav('/');
-      }, 5000);
-    };
+  //     timeOut.current = setTimeout(() => {
+  //       nav('/');
+  //     }, 5000);
+  //   };
 
-    events.forEach((event) => {
-      window.addEventListener(event, resetTimeout);
-    });
+  //   events.forEach((event) => {
+  //     window.addEventListener(event, resetTimeout);
+  //   });
 
-    resetTimeout();
+  //   resetTimeout();
 
-    return () => {
-      events.forEach((event) => {
-        window.removeEventListener(event, resetTimeout);
-      });
+  //   return () => {
+  //     events.forEach((event) => {
+  //       window.removeEventListener(event, resetTimeout);
+  //     });
 
-      if (timeOut.current) {
-        clearTimeout(timeOut.current);
-      }
-    };
-  }, [nav]);
+  //     if (timeOut.current) {
+  //       clearTimeout(timeOut.current);
+  //     }
+  //   };
+  // }, [nav]);
 
   return (
     <div className="access-page">
@@ -65,6 +65,9 @@ export function Header() {
     <header className="header">
       <nav aria-label="Navegación principal">
         <ul className="header__nav">
+          <a className="header__icon-btn--logo" href="/">
+           <img src="/src/assets/logo.png" alt="Logo"/>
+          </a>
           <li className="header__item header__logo"><a href="/">Relatos de papel</a></li> 
 
           <li className="header__item"><a href="#inicio">Inicio</a></li>
@@ -73,10 +76,13 @@ export function Header() {
           <li className="header__item"><a href="#mas-vendidos">Más Vendidos</a></li>
           <li className="header__item"><a href="#sobre-nosotros">Sobre nosotros</a></li>
           
-          <a className="header__icon-btn" href="/search">
+          <a className="header__icon-btn--search" href="/search">
+           <input className="newsletter__input--search" type="text" placeholder="Libro a buscar libro ..." aria-label="Libro a buscar libro ..."/>
+          </a>
+          <a className="header__icon-btn--search" href="/search">
            <img src="/src/assets/search.png" alt="Buscar"/>
           </a>
-           <a className="header__icon-btn" href="/profile">
+           <a className="header__icon-btn--profile" href="/profile">
            <img src="/src/assets/profile.png" alt="Perfil"/>
           </a>
            <a className="header__icon-btn header__icon-btn--cart" href="/cart">
