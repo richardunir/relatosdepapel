@@ -14,37 +14,6 @@ import { Copyright } from "../components/footer.jsx";
 const libroMini = "https://via.placeholder.com/150x200";
 const portadaEjemplo = "https://via.placeholder.com/300x400";
 
-/* ================= HEADER LIBRO ================= */
-export function HeaderLibro() {
-    return (
-        <header className="header-book">
-            <nav className="header-book__nav" aria-label="Navegación principal">
-                <ul className="header-book__menu">
-                    <li className="header-book__logo">
-                        <a href="/">Relatos de papel</a>
-                    </li>
-
-                    <li className="header-book__item"><a href="#inicio">Inicio</a></li>
-                    <li className="header-book__item"><a href="#categorias">Categorias</a></li>
-                    <li className="header-book__item"><a href="#novedades">Novedades</a></li>
-                    <li className="header-book__item"><a href="#vendidos">Más Vendidos</a></li>
-                    <li className="header-book__item"><a href="#nosotros">Sobre nosotros</a></li>
-
-                    <a className="header-book__icon" href="/search">
-                        <img src="/src/assets/search.png" alt="Buscar" />
-                    </a>
-                    <a className="header-book__icon" href="/profile">
-                        <img src="/src/assets/profile.png" alt="Perfil" />
-                    </a>
-                    <a className="header-book__icon" href="/cart">
-                        <img src="/src/assets/carrito.png" alt="Carrito" />
-                    </a>
-                </ul>
-            </nav>
-        </header>
-    );
-}
-
 /* ================= DETALLE LIBRO ================= */
 export function DetalleLibroSection() {
     return (
