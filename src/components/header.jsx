@@ -17,7 +17,7 @@ export default function Header() {
           <a className="header__icon-btn header__icon-btn--profile" href="/">
             <img src="/src/assets/profile.png" alt="Perfil" />
           </a>
-          <a className="header__icon-btn header__icon-btn--cart" href="/carrito">
+          <a className="header__icon-btn header__icon-btn--cart" href="/cart">
             <img src="/src/assets/carrito.png" alt="Carrito" />
           </a>
         </ul>
