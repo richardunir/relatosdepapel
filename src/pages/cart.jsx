@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import "../styles/styleCarrito.css";
+import "../styles/styleCart.css";
 import Header from "../components/header.jsx";
 import Footer from "../components/footer.jsx";
 import { Copyright } from "../components/footer.jsx";
