@@ -10,67 +10,66 @@ a {
   color: #000000;
 }
 
-/* Utilitarios de texto heredados */
+/* Utilitarios */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .font-bold { font-weight: bold; }
 
-/* HEADER*/
+/* ===========================
+   HEADER (BEM)
+   =========================== */
 .header__nav {
   display: flex;
   text-align: center;
   margin-top: 0.4%;
+  /* Antes .header__nav aplicaba al contenedor flex, 
+     ahora el <ul> tiene la clase .header__menu para comportarse como flex container si es necesario,
+     pero mantenemos la estructura visual original donde nav es el flex principal */
 }
 
-.header__logo {
-  padding-right: 20%; /* Ajustado del original */
+.header__menu {
+    display: flex;
+    width: 100%; /* Asegura que ocupe el nav */
+    justify-content: space-between; /* Distribuye items y logos */
 }
 
-.header__menu,
-.header__actions {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Elementos del menú (heredado de li margin) */
+/* Elementos del menú */
 .header__item {
   margin: 1% 0.8%;
 }
 
+.header__logo {
+  padding-right: 20%; 
+}
+
+/* Iconos de acción */
 .header__icon-btn {
   padding-top: 1%;
   padding-left: 1%;
-
+  display: inline-block; /* Asegura que los enlaces con img se comporten bien */
 }
 
-
-
-.header__icon-btn--search{
+.header__icon-btn--search {
     padding-top: 1%;
     margin-right: -6%;
     margin-top: -1%;
 }
 
 .header__icon-btn--profile {
- padding-top: 1%;
- margin-left: 30%;
-
-}
-
-.header__icon-btn--logo {
- padding-top: 0.5%;
-  padding-left: 2%;
-
+    padding-top: 1%;
+    margin-left: 30%;
 }
 
 .header__icon-btn--cart {
-  padding-top: 0.6%;
+    padding-top: 0.6%;
 }
 
-/* HERO */
+/* ===========================
+   HERO (BEM)
+   =========================== */
 .hero {
   background: rgba(255, 251, 235, 0.75);
-  position: relative; /* Necesario para el layout original */
+  position: relative;
 }
 
 .hero__content {
@@ -140,7 +139,9 @@ a {
   text-align: start;
 }
 
-/* MAIN CONTENT */
+/* ===========================
+   MAIN CONTENT & COMPONENTS
+   =========================== */
 .main-content {
   padding: 1%;
   padding-top: 2%;
@@ -151,7 +152,6 @@ a {
   font-weight: bold;
 }
 
-/* FEATURES */
 .features {
   display: flex;
   justify-content: space-between;
@@ -163,7 +163,6 @@ a {
   padding-bottom: 4%;
 }
 
-/* BOOK CARD */
 .section-title {
   margin-top: 2%;
   font-weight: bold;
@@ -175,6 +174,7 @@ a {
   text-align: center;
 }
 
+/* Book List / Card */
 .book-list {
   display: flex;
   justify-content: space-between;
@@ -211,7 +211,7 @@ a {
   margin-left: 32%;
 }
 
-/* BUTTONS */
+/* Buttons */
 .btn {
   display: flex;
   justify-content: center;
@@ -251,7 +251,7 @@ a {
   border: 0.15rem solid #000;
 }
 
-/* NEWSLETTER */
+/* Newsletter */
 .newsletter {
   background: rgba(255, 251, 235, 0.75);
   text-align: center;
@@ -268,11 +268,6 @@ a {
 }
 
 .newsletter__text {
-  margin: 1% 1.2%;
-  text-align: left;
-}
-
-.newsletter .newsletter__text {
    margin: 1% 1.2%; 
    text-align: center;
 }
@@ -297,7 +292,9 @@ a {
     margin-top: 0%;
 }
 
-/* FOOTER */
+/* ===========================
+   FOOTER (BEM)
+   =========================== */
 .footer {
   display: flex;
   margin: 1% 1.2%;
@@ -313,6 +310,7 @@ a {
   text-align: start;
 }
 
+/* Modificador para la columna de ayuda */
 .footer__column--help {
   margin-left: 18%;
   margin-right: 14%;
@@ -328,6 +326,7 @@ a {
   text-align: left;
 }
 
+/* Títulos de las listas en el footer */
 .footer__list-title {
   margin: 2% 0%;
   padding-top: 3%;
@@ -335,11 +334,12 @@ a {
   font-weight: bold;
 }
 
+/* Elementos de la lista (items) */
 .footer__item {
   margin: 2% 0%;
   padding-top: 3%;
   padding-bottom: 3%;
-  font-weight: bold;
+  /* font-weight: bold;  <-- Opcional: El CSS original lo tenía, descomentar si es necesario */
 }
 
 .copyright {
@@ -347,7 +347,9 @@ a {
   padding: 2%;
 }
 
-/* MEDIA QUERIES - RESPONSIVE DESIGN */
+/* ===========================
+   MEDIA QUERIES
+   =========================== */
 
 /* Tablet (max 768px) */
 @media (max-width: 768px) {
@@ -355,18 +357,20 @@ a {
     justify-content: space-around;
   }
 
-  /* Ocultar elementos del menú */
+  /* Ocultar elementos del menú excepto el logo */
   .header__item:not(.header__logo) {
     display: none;
   }
   
   .header__logo {
      padding-right: 0;
-     display: block; /* Asegurar que el logo se vea */
+     display: block; 
   }
 
-  .header__actions {
-      display: flex; /* Mantener iconos */
+  /* El CSS original usaba .header__actions, pero en el HTML todo está dentro del UL. 
+     Para mantener los iconos visibles en móvil, apuntamos a los botones de icono */
+  .header__icon-btn {
+      display: inline-block; /* Asegurar que se vean */
   }
 
   .hero {
@@ -414,7 +418,6 @@ a {
     z-index: 10;
   }
   
-  /* Ajuste específico tablet según CSS */
    @media (max-width: 768px) and (min-width: 481px) {
       .hero__highlight-card {
          position: absolute;
