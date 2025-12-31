@@ -28,19 +28,19 @@ function Checkout() {
               <div className="checkout__order-row">
                 <span>Subtotal</span>
                 <span className="checkout__order-value checkout__order-value--red">
-                  $ XX.XXX
+                  $ 45.000
                 </span>
               </div>
               <div className="checkout__order-row">
                 <span>Envío</span>
                 <span className="checkout__order-value checkout__order-value--red">
-                  $ XX.XXX
+                  $ 5.000
                 </span>
               </div>
               <div className="checkout__order-row checkout__order-row--total">
                 <span>Total a pagar</span>
                 <span className="checkout__order-value checkout__order-value--total">
-                  $ XX.XXX
+                  $ 50.000
                 </span>
               </div>
             </div>
@@ -58,7 +58,7 @@ function Checkout() {
                 <div className="checkout__book-name">Libro1</div>
                 <div className="checkout__book-author">Autor</div>
                 <div className="checkout__book-price checkout__book-price--red">
-                  $ XX.XXX
+                  $ 45.000
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ function Checkout() {
               </p>
             </div>
             <div className="checkout__address-price checkout__address-price--red">
-              $ XX.XXX
+              $ 50.000
             </div>
           </div>
 
