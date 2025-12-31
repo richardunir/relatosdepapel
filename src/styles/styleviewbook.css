@@ -1,30 +1,36 @@
-/* ================= HEADER ================= */
-header {
+/* ================= HEADER BOOK ================= */
+.header-book {
     background: #fff;
     border-bottom: 1px solid #e5e5e5;
     padding: 15px 40px;
 }
 
-.navbar-header {
+.header-book__menu {
     display: flex;
     align-items: center;
     gap: 25px;
     list-style: none;
 }
 
-.navbar-header li a {
+.header-book__logo a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #111;
+}
+
+.header-book__item a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
 }
 
-.logo a {
-    font-size: 20px;
-    font-weight: bold;
+.header-book__icon img {
+    width: 22px;
 }
 
-/* ================= DETALLE LIBRO ================= */
-.detalle-libro {
+/* ================= BOOK DETAIL ================= */
+.book-detail {
     display: grid;
     grid-template-columns: 50% 1fr;
     gap: 50px;
@@ -32,339 +38,103 @@ header {
     background: #faf7ef;
 }
 
-/* IMAGEN */
-.detalle-left img {
+.book-detail__image img {
     width: 100%;
     border-radius: 8px;
 }
 
-/* INFO */
-.detalle-right {
+.book-detail__info {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.detalle-cabezera {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    line-height: 1.9;
-}
-
-.titulo-libro {
+.book-detail__title {
     font-size: 26px;
     font-weight: bold;
 }
 
-.autor-editorial {
-    color: #666;
+.book-detail__author {
     font-size: 14px;
+    color: #666;
 }
 
-.rating {
-    font-size: 14px;
+.book-detail__rating {
     color: #f39c12;
 }
 
-.descripcion-libro {
-    background: white;
-    text-align: left;
-}
-
-.descripcion {
+/* ================= DESCRIPTION ================= */
+.book-detail__description {
     font-size: 18px;
-    line-height: 2.0;
-    color: #333;
-    text-align: left;
+    line-height: 2;
 }
 
-/* FICHA */
-.ficha-tecnica {
+.book-detail__specs {
     list-style: none;
     padding: 0;
     font-size: 18px;
-    line-height: 2.0;
 }
 
-.ficha-tecnica li {
-    margin-bottom: 6px;
+.book-detail__spec {
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
-.ficha-tecnica li strong {
-    font-weight: 700;
-    min-width: 350px;
-    text-align: left;
-}
-
-/* ================= COMPRA ================= */
-.compra-box {
-    margin-top: 20px;
-    padding: 20px;
+/* ================= PURCHASE ================= */
+.purchase-box {
     background: #eaf3ec;
+    padding: 20px;
     border-radius: 10px;
-    width: 100%;
 }
 
-.stock {
-    font-size: 14px;
+.purchase-box__stock {
     color: #2c7a2c;
 }
 
-.precio {
+.purchase-box__price {
     font-size: 26px;
     font-weight: bold;
-    margin: 10px 0;
 }
 
-.btn-comprar {
+.purchase-box__button {
     width: 100%;
     padding: 10px;
     background: #2ecc71;
-    border: none;
     color: #fff;
-    font-weight: bold;
-    cursor: pointer;
+    border: none;
     border-radius: 6px;
+    cursor: pointer;
 }
 
-/* ================= DESTACADOS ================= */
-.destacados {
+/* ================= FEATURED BOOKS ================= */
+.featured-books {
     padding: 50px;
 }
 
-.destacados h2 {
-    margin-bottom: 25px;
-}
-
-.destacados-grid {
+.featured-books__grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
 }
 
-.card-destacado {
+.featured-books__card {
     background: #fff;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
 }
 
-.card-destacado img {
+.featured-books__image {
     width: 100%;
     height: 70%;
     object-fit: cover;
-    border-radius: 6px;
 }
 
-.btn-vermas {
+.featured-books__button {
     margin-top: 10px;
     padding: 6px 12px;
     background: #111;
     color: #fff;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-/* ================= FOOTER ================= */
-
-.vista-footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 50px;
-    background: white;
-    border-top: 1px solid #e5e5e5;
-}
-
-
-.vista-footer h4 {
-    margin-bottom: 10px;
-}
-
-.vista-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.vista-footer li {
-    margin-bottom: 6px;
-    font-size: 14px;
-}
-
-.copyright-libro {
-    text-align: center;
-    padding: 15px;
-    background: #fff;
-    color: #111;
-    font-size: 13px;
-    border-top: 1px solid #e5e5e5;
-}
-
-/* ================= RESPONSIVE ================= */
-
-/* ---------- LARGE DESKTOP (≤ 1200px) ---------- */
-@media (max-width: 1200px) {
-
-    .detalle-libro {
-        grid-template-columns: 45% 1fr;
-        gap: 30px;
-        padding: 40px;
-    }
-
-    .destacados-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .ficha-tecnica li strong {
-        min-width: 250px;
-    }
-}
-
-/* ---------- TABLET (≤ 992px) ---------- */
-@media (max-width: 992px) {
-
-    /* HEADER */
-    .navbar-header {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    /* DETALLE LIBRO */
-    .detalle-libro {
-        grid-template-columns: 1fr;
-        padding: 40px 30px;
-    }
-
-    .detalle-left img {
-        max-width: 380px;
-        margin: 0 auto;
-        display: block;
-    }
-
-    .detalle-cabezera {
-        align-items: center;
-        text-align: center;
-    }
-
-    .descripcion,
-    .descripcion-libro {
-        text-align: left;
-    }
-
-    .ficha-tecnica li {
-        justify-content: space-between;
-    }
-
-    .ficha-tecnica li strong {
-        min-width: 200px;
-    }
-
-    /* DESTACADOS */
-    .destacados-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* FOOTER */
-    .vista-footer {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        text-align: center;
-    }
-}
-
-/* ---------- MOBILE (≤ 768px) ---------- */
-@media (max-width: 768px) {
-
-    /* HEADER */
-    header {
-        padding: 15px 20px;
-    }
-
-    .navbar-header {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .navbar-header li {
-        display: none;
-    }
-
-    .logo {
-        display: block;
-    }
-
-    /* DETALLE LIBRO */
-    .detalle-libro {
-        padding: 30px 20px;
-        gap: 30px;
-    }
-
-    .titulo-libro {
-        font-size: 22px;
-    }
-
-    .descripcion {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    .ficha-tecnica {
-        font-size: 16px;
-    }
-
-    .ficha-tecnica li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .ficha-tecnica li strong {
-        min-width: auto;
-    }
-
-    /* COMPRA */
-    .compra-box {
-        width: 100%;
-    }
-
-    /* DESTACADOS */
-    .destacados {
-        padding: 30px 20px;
-    }
-
-    .destacados-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* FOOTER */
-    .vista-footer {
-        grid-template-columns: 1fr;
-        padding: 30px 20px;
-        gap: 25px;
-    }
-
-    .copyright-libro {
-        font-size: 12px;
-        padding: 12px;
-    }
-}
-
-/* ---------- SMALL MOBILE (≤ 480px) ---------- */
-@media (max-width: 480px) {
-
-    .detalle-left img {
-        max-width: 100%;
-    }
-
-    .destacados-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .precio {
-        font-size: 22px;
-    }
 }
