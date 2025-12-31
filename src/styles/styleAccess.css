@@ -5,112 +5,123 @@
   list-style: none;
 }
 
-h2,
-p,
-div {
-  text-align: center;
-}
-
 a {
   text-decoration: none;
   color: #000000;
 }
 
-li,
-.featured,
-#newsletter-title,
-.footer {
-  margin: 1% 1.2%;
-}
+/* Utilitarios de texto heredados */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.font-bold { font-weight: bold; }
 
-#hero-title,
-#hero-paragraph,
-.hero-buttons,
-.footer-title,
-.footer-paragraph {
-  text-align: left;
-}
-
-.buttons,
-.menu,
-.features,
-.books,
-.price-container {
+/* HEADER*/
+.header__nav {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin-left: 2%;
-  margin-top: 4%;
-  margin-right: 2%;
-  margin-bottom: 4%;
-}
-
-.navbar-header {
-  display: flex;
-  justify-content: center;
   text-align: center;
   margin-top: 0.4%;
 }
 
-.hero-stats,
-.footer {
+.header__logo {
+  padding-right: 20%; /* Ajustado del original */
+}
+
+.header__menu,
+.header__actions {
   display: flex;
+  justify-content: space-between;
 }
 
-.hero-section,
-.email-subscription {
+/* Elementos del menú (heredado de li margin) */
+.header__item {
+  margin: 1% 0.8%;
+}
+
+.header__icon-btn {
+  padding-top: 1%;
+  padding-left: 1%;
+
+}
+
+
+
+.header__icon-btn--search{
+    padding-top: 1%;
+    margin-right: -6%;
+    margin-top: -1%;
+}
+
+.header__icon-btn--profile {
+ padding-top: 1%;
+ margin-left: 30%;
+
+}
+
+.header__icon-btn--logo {
+ padding-top: 0.5%;
+  padding-left: 2%;
+
+}
+
+.header__icon-btn--cart {
+  padding-top: 0.6%;
+}
+
+/* HERO */
+.hero {
   background: rgba(255, 251, 235, 0.75);
+  position: relative; /* Necesario para el layout original */
 }
 
-.main-content {
-  padding: 1%;
-  padding-top: 2%;
-}
-
-#hero-title,
-#hero-paragraph,
-.button-explore {
-  margin-bottom: 4%;
-}
-
-.hero-text {
+.hero__content {
   display: flex;
   flex-direction: column;
   position: absolute;
   margin-left: 3%;
   margin-top: 12%;
+  text-align: left;
 }
 
-.hero-buttons {
+.hero__title {
+  text-align: left;
+  margin-bottom: 4%;
+  font-weight: bold;
+}
+
+.hero__description {
+  text-align: left;
+  margin-bottom: 4%;
+}
+
+.hero__actions {
   display: flex;
   gap: 4%;
+  text-align: left;
 }
 
-.button-explore {
-  margin-right: 3%;
+.hero__stats {
+  display: flex;
+  margin-top: 4%;
 }
 
-.logo {
-  padding-right: 6%;
+.hero__stat-number {
+  margin-bottom: 0;
+  margin-right: -9%;
 }
 
-.feature-title {
-  padding-bottom: 4%;
+.hero__stat-text {
+  margin-top: 4%;
+  margin-right: 16%;
 }
 
-.menu-contact,
-.logo {
-  padding-right: 20%;
-}
-
-.image-library {
+.hero__image-container {
   justify-content: flex-end;
   position: relative;
   display: inline-block;
   margin-left: 64%;
 }
 
-.image-hero {
+.hero__image {
   height: auto;
   display: block;
   border-radius: 3%;
@@ -118,51 +129,7 @@ li,
   margin-top: 12%;
 }
 
-.number {
-  margin-bottom: 0;
-  margin-right: -9%;
-}
-
-.text {
-  margin-top: 4%;
-  margin-right: 16%;
-}
-
-.button-suscribe {
-  margin-left: 1%;
-}
-
-.book-description {
-  padding-bottom: 4%;
-}
-
-.button-allbooks,
-.image-email,
-.title-suscribe,
-#email-input {
-  margin-top: 2%;
-}
-
-.featured {
-  margin-top: 2%;
-}
-
-.title-suscribe,
-.featured,
-#hero-title,
-#main-content {
-  font-weight: bold;
-}
-
-.book-price {
-  margin-top: 4%;
-}
-
-.book-rating {
-  margin-top: 2%;
-}
-
-.book-detail {
+.hero__highlight-card {
   position: absolute;
   top: 84%;
   background-color: rgba(255, 255, 255, 0.8);
@@ -170,180 +137,259 @@ li,
   border-radius: 8%;
   box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
   z-index: 10;
-}
-
-.book-month,
-.book-title,
-.book-stars,
-.book-description,
-.book-author,
-.book-rating {
   text-align: start;
 }
 
-.button-profile,
-.button-search {
-  padding-top: 1%;
-  padding-right: 1%;
+/* MAIN CONTENT */
+.main-content {
+  padding: 1%;
+  padding-top: 2%;
+  text-align: center;
 }
 
-.button-cart {
-  padding-top: 0.6%;
+.main-content__title {
+  font-weight: bold;
 }
 
-.button-explore {
+/* FEATURES */
+.features {
   display: flex;
-  padding: 4% 6% 4% 7%;
+  justify-content: space-between;
+  text-align: center;
+  margin: 4% 2%;
+}
+
+.features__title {
+  padding-bottom: 4%;
+}
+
+/* BOOK CARD */
+.section-title {
+  margin-top: 2%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-subtitle {
+  margin: 1% 1.2%;
+  text-align: center;
+}
+
+.book-list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 4% 2%;
+}
+
+.book-card__title {
+  padding-bottom: 4%;
+  text-align: start;
+}
+
+.book-card__author,
+.book-card__rating {
+  text-align: start;
+}
+
+.book-card__rating {
+  margin-top: 2%;
+}
+
+.book-card__actions {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 4%;
+}
+
+.book-card__price {
+  margin-top: 4%;
+}
+
+.book-card__cart-icon {
+  margin-left: 32%;
+}
+
+/* BUTTONS */
+.btn {
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
+  cursor: pointer;
+}
+
+.btn--primary {
+  padding: 4% 6% 4% 7%;
   background: #000;
   color: #fafafa;
+  border: none;
+  margin-right: 3%;
 }
 
-.button-news {
-  display: flex;
+.btn--secondary {
   padding: 4% 4% 4% 5%;
-  justify-content: center;
-  align-items: center;
   width: 30%;
-  border-radius: 1rem;
   background: #fafafa;
   border: 0.15rem solid #000;
   color: #000000;
   height: 6%;
 }
 
-.button-all {
-  display: flex;
+.btn--load-more {
   padding: 1% 2% 1% 2%;
-  border-radius: 1rem;
   background: #000;
   color: #fafafa;
-  margin-top: 4%;
-  margin-left: 45%;
+  display: inline-flex; 
 }
 
-.button-suscribe {
-  border-radius: 1rem;
+.btn--subscribe {
   background: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 55%;
+  margin: -3.2% 34% 0% 54%;
   padding: 1% 3% 1% 3%;
-  margin: -3% 1% 2% 54%;
+  border: 0.15rem solid #000;
 }
 
-.image-cart {
-  margin-left: 32%;
+/* NEWSLETTER */
+.newsletter {
+  background: rgba(255, 251, 235, 0.75);
+  text-align: center;
+  padding: 2%; 
 }
 
-#email-input {
-  border-radius: 1rem;
-  padding: 1% 8% 1% 1%;
-  margin: 2% 16% 0% 0%;
+.newsletter__icon {
+  margin-top: 2%;
 }
 
-.suscription-form {
+.newsletter__title {
+  font-weight: bold;
+  margin-top: 1%;
+}
+
+.newsletter__text {
+  margin: 1% 1.2%;
+  text-align: left;
+}
+
+.newsletter .newsletter__text {
+   margin: 1% 1.2%; 
+   text-align: center;
+}
+
+.newsletter__form {
   display: flex;
   flex-direction: column;
   gap: 1%;
 }
 
-.footer-owns,
-.footer-help,
-.footer-legal {
-  text-align: start;
-  margin-left: 8%;
+.newsletter__input {
+    border-radius: 1rem;
+    padding: 1% 8% 1% 1%;
+    margin: 2% 50% 0% 28%;
+    margin-top: 2%;
 }
 
-.footer-title {
+.newsletter__input--search {
+    border-radius: 1rem;
+    padding: 8% 8% 10% 48%;
+    margin: 0% 0% 8% 20%;
+    margin-top: 0%;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  margin: 1% 1.2%;
+  padding-top: 2%;
+}
+
+.footer__brand {
+  margin-left: 2%;
+}
+
+.footer__column {
+  margin-left: 8%;
+  text-align: start;
+}
+
+.footer__column--help {
+  margin-left: 18%;
+  margin-right: 14%;
+}
+
+.footer__title {
   padding-bottom: 4%;
   font-weight: bold;
+  text-align: left;
 }
 
-.footer-li {
+.footer__text {
+  text-align: left;
+}
+
+.footer__list-title {
   margin: 2% 0%;
   padding-top: 3%;
   padding-bottom: 3%;
   font-weight: bold;
 }
 
-.footer-help {
-  margin-left: 18%;
-  margin-right: 14%;
-}
-
-.footer-relatos {
-  margin-left: 2%;
-}
-
-.footer {
-  padding-top: 2%;
-}
-
-.footer-li {
+.footer__item {
   margin: 2% 0%;
   padding-top: 3%;
   padding-bottom: 3%;
   font-weight: bold;
 }
 
-.footer-help {
-  margin-left: 18%;
-  margin-right: 14%;
+.copyright {
+  text-align: center;
+  padding: 2%;
 }
 
-.footer-relatos {
-  margin-left: 2%;
-}
+/* MEDIA QUERIES - RESPONSIVE DESIGN */
 
-.footer {
-  padding-top: 2%;
-}
-
-/* --- Media Queries para Responsive Design --- */
-/* --- Estilos para tablet (768px y menos) --- */
+/* Tablet (max 768px) */
 @media (max-width: 768px) {
-  .navbar-header {
+  .header__nav {
     justify-content: space-around;
   }
 
-  /* Menu burguer  */
-  .menu-home,
-  .menu-categories,
-  .menu-feaures,
-  .menu-sell,
-  .menu-contact {
+  /* Ocultar elementos del menú */
+  .header__item:not(.header__logo) {
     display: none;
   }
-
-  .logo {
-    padding-right: 0;
+  
+  .header__logo {
+     padding-right: 0;
+     display: block; /* Asegurar que el logo se vea */
   }
 
-  .hero-section {
+  .header__actions {
+      display: flex; /* Mantener iconos */
+  }
+
+  .hero {
     display: flex;
     flex-direction: column;
     padding: 2rem;
   }
 
-  .hero-text {
+  .hero__content {
     position: static;
     margin: 0;
     text-align: center;
     order: 1;
   }
 
-  #hero-title,
-  #hero-paragraph,
-  .hero-buttons {
+  .hero__title,
+  .hero__description,
+  .hero__actions {
     text-align: center;
     justify-content: center;
   }
 
-  .image-library {
+  .hero__image-container {
     margin: 0;
     justify-content: center;
     width: 100%;
@@ -351,55 +397,46 @@ li,
     margin-bottom: 4%;
   }
 
-  .image-hero {
+  .hero__image {
     margin: 0;
     width: 80%;
     max-width: 400px;
   }
 
-  .book-detail {
+  .hero__highlight-card {
     position: static;
     margin-top: 1rem;
-  }
-
-  .button-suscribe {
-    border-radius: 1rem;
-    background: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 55%;
-    padding: 1% 3% 1% 3%;
-    margin: -4.6% 2% 2% 60%;
-  }
-
-  .button-all {
-    display: flex;
-    padding: 1% 2% 1% 2%;
-    border-radius: 1rem;
-    background: #000;
-    color: #fafafa;
-    margin-top: 4%;
-    margin-left: 39%;
-  }
-
-  .book-detail {
-    position: absolute;
-    top: 66%;
+    top: auto; 
     background-color: rgba(255, 255, 255, 0.8);
     padding: 3% 5%;
     border-radius: 8%;
     box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
+  
+  /* Ajuste específico tablet según CSS */
+   @media (max-width: 768px) and (min-width: 481px) {
+      .hero__highlight-card {
+         position: absolute;
+         top: 66%;
+      }
+   }
+
+  .btn--subscribe {
+    margin: -4.6% 2% 2% 60%;
+  }
+
+  .btn--load-more {
+    margin-left: 39%;
+  }
 
   .features,
-  .books {
+  .book-list {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .feature-item,
+  .features__item,
   .book-card {
     flex-basis: 45%;
   }
@@ -410,93 +447,76 @@ li,
     text-align: center;
   }
 
-  .footer-relatos,
-  .footer-owns,
-  .footer-help,
-  .footer-legal {
+  .footer__brand,
+  .footer__column {
     flex-basis: 45%;
     margin: 1rem 0;
     text-align: center;
   }
 
-  .footer-title,
-  .footer-paragraph {
+  .footer__title,
+  .footer__text {
     text-align: center;
   }
 }
 
-/* --- Estilos para cel (480px y menos) --- */
+/* Mobile (max 480px) */
 @media (max-width: 480px) {
   .features,
-  .books,
+  .book-list,
   .footer {
     flex-direction: column;
     align-items: center;
   }
 
-  .feature-item,
+  .features__item,
   .book-card {
     flex-basis: 90%;
   }
 
-  .hero-buttons {
+  .hero__actions {
     flex-direction: column;
     align-items: center;
   }
 
-  .button-news {
+  .btn--secondary {
     width: 60%;
     margin-bottom: 8%;
   }
 
-  .button-all {
+  .btn--load-more {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .subscription-form {
+  .newsletter__form {
     align-items: center;
   }
 
-  #email-input {
+  .newsletter__input {
     width: 90%;
     text-align: center;
     padding: 3%;
     margin: 2% 0;
   }
 
-  .button-suscribe {
+  .btn--subscribe {
     position: static;
     margin: 2% 0;
     width: 60%;
+    margin: 0.4% 2% 2% 19%; 
   }
 
-  .image-cart {
+  .book-card__cart-icon {
     margin-left: 1rem;
   }
 
-  .book-detail {
+  .hero__highlight-card {
     position: absolute;
     top: 60%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 3% 5%;
-    border-radius: 8%;
-    box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
-    z-index: 10;
   }
 
-  .button-suscribe {
-    border-radius: 1rem;
-    background: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 55%;
-    padding: 1% 3% 1% 3%;
-    margin: 0.4% 2% 2% 19%;
-  }
-
-  .number {
+  .hero__stat-number {
     margin-bottom: 0;
     margin-right: -18%;
   }
