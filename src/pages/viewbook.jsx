@@ -16,7 +16,7 @@ export function HeaderLibro() {
         <header>
             <nav aria-label="Navegación principal"> {/* Aria-label se usa para accesibilidad*/}
                 <ul className="navbar-header">
-                    <li className="logo"><a href="/">Relatos de papel</a></li>
+                    <li className="logo"><a href="/">Relatos de  papel</a></li>
 
                     <li className="menu-home"><a href="#inicio">Inicio</a></li>
                     <li className="menu-categories"><a href="#categorias">Categorias</a></li>
