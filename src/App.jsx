@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
+import Categories from './pages/categories.jsx';
 import Cart from './pages/carrito.jsx';
 import Checkout from './pages/checkout.jsx';
 import Access from './pages/access.jsx';
@@ -15,6 +15,7 @@ function App() {
         <Route path="/access" element={<Access/>} />
         <Route path="/carrito" element={<Cart/>} />
         <Route path="/viewbook" element={<Viewbook/>} />
+        <Route path="/categories" element={<Categories/>} />
       </Routes>
     </Router>
   );

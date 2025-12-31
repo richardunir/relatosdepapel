@@ -1,0 +1,94 @@
+{
+    "books": [ 
+        {
+            "id": 1,
+            "title": "Cien años de soledad",
+            "author": "Gabriel García Márquez",
+            "genre": "Realismo mágico",
+            "published_year": 1967,
+            "value": "$150.000",
+            "description": "Una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo."
+        },
+        {
+            "id": 2,
+            "title": "Don Quijote de la Mancha",
+            "author": "Miguel de Cervantes",
+            "genre": "Novela",
+            "published_year": 1605,
+            "value": "$200.000",
+            "description": "La historia de un hidalgo que, enloquecido por la lectura de libros de caballerías, decide convertirse en caballero andante."
+        },
+        {
+            "id": 3,
+            "title": "La sombra del viento",
+            "author": "Carlos Ruiz Zafón",
+            "genre": "Misterio",
+            "published_year": 2001,
+            "value": "$180.000",
+            "description": "Un joven llamado Daniel descubre un libro olvidado en el Cementerio de los Libros Olvidados y se ve envuelto en un misterio que abarca décadas."
+        },
+        {
+            "id": 4,
+            "title": "Ficciones",
+            "author": "Jorge Luis Borges",
+            "genre": "Cuentos",
+            "published_year": 1944,
+            "value": "$120.000",
+            "description": "Una colección de cuentos que exploran temas como la realidad, la identidad y el infinito, característicos del estilo de Borges."
+        },
+        {
+            "id": 5,
+            "title": "La casa de los espíritus",
+            "author": "Isabel Allende",
+            "genre": "Realismo mágico",
+            "published_year": 1982,
+            "value": "$160.000",
+            "description": "Una saga familiar que mezcla elementos de realismo mágico con la historia política y social de Chile."
+        },
+        {
+            "id": 6,
+            "title": "Rayuela",
+            "author": "Julio Cortázar",
+            "genre": "Novela experimental",
+            "published_year": 1963,
+            "value": "$140.000",
+            "description": "Una novela que puede ser leída de múltiples maneras, explorando la vida de un grupo de amigos en París y Buenos Aires."
+        },
+        {
+            "id": 7,
+            "title": "El amor en los tiempos del cólera",
+            "author": "Gabriel García Márquez",
+            "genre": "Novela romántica",
+            "published_year": 1985,
+            "value": "$170.000",
+            "description": "Una historia de amor que se desarrolla a lo largo de más de cincuenta años, explorando la paciencia y la perseverancia del amor verdadero."
+        },
+        {
+            "id": 8,
+            "title": "Pedro Páramo",
+            "author": "Juan Rulfo",
+            "genre": "Realismo mágico",
+            "published_year": 1955,
+            "value": "$130.000",
+            "description": "Un joven llamado Juan Preciado viaja al pueblo de Comala para encontrar a su padre, Pedro Páramo, y descubre un lugar habitado por fantasmas."
+        },
+        {
+            "id": 9,
+            "title": "El túnel",
+            "author": "Ernesto Sabato",
+            "genre": "Novela psicológica",
+            "published_year": 1948,
+            "value": "$110.000",
+            "description": "La historia de un pintor obsesionado con una mujer, explorando temas de alienación y locura."
+        },
+        {
+            "id": 10,
+            "title": "La ciudad y los perros",
+            "author": "Mario Vargas Llosa",
+            "genre": "Novela",
+            "published_year": 1963,
+            "value": "$190.000",
+            "description": "Una crítica a la vida militar en Perú, centrada en un grupo de cadetes en una academia militar."
+        }
+    ]
+}
