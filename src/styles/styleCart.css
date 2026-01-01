@@ -1,4 +1,9 @@
-/* Estilos para el carrito de compras */
+/* ==========================================================================
+   CARRITO DE COMPRAS - Metodología BEM
+   ========================================================================== */
+
+/* BLOQUE: cart
+   ========================================================================== */
 
 .cart {
   max-width: 1200px;
@@ -6,7 +11,9 @@
   padding: 2rem 1rem;
 }
 
-/* Indicador de pasos */
+/* ELEMENTO: cart__steps (Indicador de pasos)
+   ========================================================================== */
+
 .cart__steps {
   display: flex;
   align-items: center;
@@ -29,6 +36,7 @@
   color: #333;
 }
 
+/* MODIFICADOR: cart__step--active */
 .cart__step--active {
   background-color: #000;
   color: white;
@@ -46,7 +54,9 @@
   background-color: #333;
 }
 
-/* Contenedor principal */
+/* ELEMENTO: cart__content (Contenedor principal)
+   ========================================================================== */
+
 .cart__content {
   border: 3px solid #00bcd4;
   border-radius: 8px;
@@ -54,7 +64,9 @@
   background-color: white;
 }
 
-/* Encabezado del carrito */
+/* ELEMENTO: cart__header (Encabezado del carrito)
+   ========================================================================== */
+
 .cart__header {
   display: flex;
   justify-content: space-between;
@@ -86,7 +98,9 @@
   color: #004999;
 }
 
-/* Carrito vacío */
+/* ELEMENTO: cart__empty (Carrito vacío)
+   ========================================================================== */
+
 .cart__empty {
   text-align: center;
   padding: 3rem;
@@ -94,13 +108,18 @@
   font-size: 1.2rem;
 }
 
-/* Lista de productos */
+/* ELEMENTO: cart__items (Lista de productos)
+   ========================================================================== */
+
 .cart__items {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
+
+/* ELEMENTO: cart__item (Item individual del carrito)
+   ========================================================================== */
 
 .cart__item {
   display: grid;
@@ -148,7 +167,9 @@
   margin: 0.5rem 0;
 }
 
-/* Control de cantidad */
+/* ELEMENTO: cart__item-quantity (Control de cantidad)
+   ========================================================================== */
+
 .cart__item-quantity {
   display: flex;
   align-items: center;
@@ -191,7 +212,9 @@
   text-align: center;
 }
 
-/* Acciones del item */
+/* ELEMENTO: cart__item-actions (Acciones del item)
+   ========================================================================== */
+
 .cart__item-actions {
   display: flex;
   align-items: center;
@@ -219,7 +242,9 @@
   font-size: 0.9rem;
 }
 
-/* Precio total del item */
+/* ELEMENTO: cart__item-total (Precio total del item)
+   ========================================================================== */
+
 .cart__item-total {
   text-align: right;
 }
@@ -230,7 +255,9 @@
   color: #e91e63;
 }
 
-/* Resumen del carrito */
+/* ELEMENTO: cart__summary (Resumen del carrito)
+   ========================================================================== */
+
 .cart__summary {
   border-top: 2px dotted #00bcd4;
   padding-top: 1.5rem;
@@ -278,7 +305,27 @@
   transform: translateY(0);
 }
 
-/* Responsive design */
+/* MODIFICADOR: cart__checkout-btn--disabled (opcional)
+   ========================================================================== */
+
+.cart__checkout-btn:disabled,
+.cart__checkout-btn--disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.cart__checkout-btn:disabled:hover,
+.cart__checkout-btn--disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Tablets y dispositivos medianos */
 @media (max-width: 768px) {
   .cart {
     padding: 1rem 0.5rem;
@@ -329,6 +376,7 @@
   }
 }
 
+/* Dispositivos móviles pequeños */
 @media (max-width: 480px) {
   .cart__steps {
     gap: 0.5rem;

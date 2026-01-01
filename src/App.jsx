@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Categories from './pages/categories.jsx';
-import Cart from './pages/carrito.jsx';
+import Cart from './pages/cart.jsx';
 import Checkout from './pages/checkout.jsx';
 import Access from './pages/access.jsx';
 import Viewbook from './pages/viewbook.jsx';
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Access/>} />
         <Route path="/checkout" element={<Checkout/>} />
         <Route path="/access" element={<Access/>} />
-        <Route path="/carrito" element={<Cart/>} />
+        <Route path="/cart" element={<Cart/>} />
         <Route path="/viewbook" element={<Viewbook/>} />
         <Route path="/categories" element={<Categories/>} />
       </Routes>
