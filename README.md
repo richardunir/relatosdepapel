@@ -22,4 +22,5 @@ Requirements:
 
 Deploy:
 1. npm install
-2. npm run dev
+2. npm install -D @types/node
+3. npm run dev

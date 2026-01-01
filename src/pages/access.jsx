@@ -1,16 +1,16 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/styleAccess.css";
-import accessImage from "../assets/accessSection.png";
-import bookImage from "../assets/book.png";
-import carImage from "../assets/car.png";
-import cardImage from "../assets/card.png";
-import supportImage from "../assets/support.png";
-import bookSusurro from "../assets/susurro.png";
-import bookCronicas from "../assets/cronicas.png";
-import bookMisterios from "../assets/misterios.png";
-import bookAmor from "../assets/amor.png";
-import emailImage from "../assets/email.png";
+import accessImage from "../resources/assets/accessSection.png";
+import bookImage from "../resources/assets/book.png";
+import carImage from "../resources/assets/car.png";
+import cardImage from "../resources/assets/card.png";
+import supportImage from "../resources/assets/support.png";
+import bookSusurro from "../resources/assets/books_image/susurro.png";
+import bookCronicas from "../resources/assets/books_image/cronicas.png";
+import bookMisterios from "../resources/assets/books_image/misterios.png";
+import bookAmor from "../resources/assets/books_image/amor.png";
+import emailImage from "../resources/assets/email.png";
 
 function Access() {
 

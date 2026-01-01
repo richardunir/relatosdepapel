@@ -1,21 +1,19 @@
-import "../styles/categories.css";
-import { useEffect, useState } from "react";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import emailImage from "../assets/email.png";
-import booksJson from "../../resources/books_data.json";
+import "@styles/categories.css";
+/* import { useEffect, useState } from "react"; */
+import Footer from "@components/footer";
+import Header from "@components/header";
+import emailImage from "@assets/email.png";
+import booksJson from "@resources/books_data.json";
+import { booksImagesConstants } from "@utils/constants";
+
+const booksImageConst = booksImagesConstants;
 
 function Categories() {
-  const [books, setBooks] = useState(() => {
-    const stored = localStorage.getItem("books");
-    if (stored) return JSON.parse(stored);
-    // booksJson has shape { books: [...] }
-    return booksJson.books || [];
-  });
+  const books = booksJson.books || [];
 
-  useEffect(() => {
+  /* useEffect(() => {
     localStorage.setItem("books", JSON.stringify(books));
-  }, [books]);
+  }, [books]); */
 
   return (
     <>
@@ -140,15 +138,16 @@ export function BookCard({ books = [] }) {
         <p>No hay libros disponibles.</p>
       ) : (
         <div className="books__grid">
-          {books.map((b) => (
-            <>
-            <div key={b.id} className="book__card">
-              <h3>{b.title}</h3>
-              <p className="card__author">{b.author}</p>
-              <p className="card__genre">{b.genre}</p>
+          {books.map((b) => {
+            return (
+              <div key={b.id} className="book__card">
+                <img className="card__image" src={booksImageConst[b.imageKey]} alt={`Portada del libro ${b.title}`} />
+                <h3>{b.title}</h3>
+                <p className="card__author">{b.author}</p>
+                <p className="card__genre">{b.genre}</p>
               </div>
-            </>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
