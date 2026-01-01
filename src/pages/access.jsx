@@ -1,19 +1,24 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/styleAccess.css";
-import accessImage from "../assets/accessSection.png";
-import bookImage from "../assets/book.png";
-import carImage from "../assets/car.png";
-import cardImage from "../assets/card.png";
-import supportImage from "../assets/support.png";
-import bookSusurro from "../assets/susurro.png";
-import bookCronicas from "../assets/cronicas.png";
-import bookMisterios from "../assets/misterios.png";
-import bookAmor from "../assets/amor.png";
-import emailImage from "../assets/email.png";
-import Header from "../components/header.jsx";
-import Footer from "../components/footer.jsx";
-import { Copyright } from "../components/footer.jsx";
+import "@styles/styleAccess.css";
+import booksJson from "@resources/books_data.json";
+import { booksImagesConstants } from "@utils/booksConstants";
+import { IconConstants } from "@utils/iconConstants";
+import { EmailSubscription } from "@components/email_section";
+
+const books = booksJson.books || [];
+const booksImageConst = booksImagesConstants;
+const icons = IconConstants;
+
+function getRandomSample(arr, n) {
+  if (!Array.isArray(arr) || arr.length === 0) return [];
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy.slice(0, Math.min(n, copy.length));
+} 
 
 function Access() {
 
@@ -52,12 +57,9 @@ function Access() {
 
   return (
     <div className="components-access">
-      <Header/>
       <HeroSection/>
       <MainContent/>
       <EmailSubscription/>
-      <Footer/>
-      <Copyright/>
     </div>
   );
 }
@@ -66,6 +68,7 @@ export default Access;
 
 
 export function HeroSection() {
+  const book_of_month = books[0] || {};
   return (
     <div className="hero" aria-labelledby="hero-title">
       <div className="hero__content">
@@ -74,7 +77,7 @@ export function HeroSection() {
           títulos esperando por ti.
         </p>
         <div className="hero__actions">
-          <button className="btn btn--primary" type="button">Explorar Libreria</button>
+          <button className="btn btn--primary" type="button" href="/categories">Explorar Libreria</button>
           <button className="btn btn--secondary" type="button">Ver Novedades</button>
         </div>
         <div className="hero__stats">
@@ -85,10 +88,10 @@ export function HeroSection() {
         </div>
       </div>
       <div className="hero__image-container">
-        <img className="hero__image" src={accessImage} alt="Libreria cafe grande con estanteria de dos pisos" />
+        <img className="hero__image" src={booksImageConst[book_of_month.imageKey]} alt="Libreria cafe grande con estanteria de dos pisos" />
         <div className="hero__highlight-card">
           <p className="hero__highlight-text">Libro del mes</p>
-          <p className="hero__highlight-title font-bold">Cien años de soledad</p>
+          <p className="hero__highlight-title font-bold">{book_of_month.title}</p>
           <p className="hero__highlight-rating">⭐⭐⭐⭐⭐ 4.9</p>
         </div>
       </div>
@@ -97,6 +100,8 @@ export function HeroSection() {
 }
 
 export function MainContent() {
+  const randomBooks = useMemo(() => getRandomSample(books, 4), [books]);
+
   return (
     <main className="main-content">
       <h2 id="main-content" className="main-content__title">¿Qué encontrarás aquí?</h2> <br />
@@ -104,22 +109,22 @@ export function MainContent() {
 
       <section className="features">
         <div className="features__item">
-          <img src={bookImage} alt="Icono de libro" />
+          <img src={icons.book_icon} alt="Icono de libro" />
           <h3 className="feature-title">Amplio catálogo</h3> 
           <p>Miles de títulos en todos los géneros literarios</p>
         </div>
         <div className="features__item">
-          <img src={carImage} alt="Icono de coche de reparto" />
+          <img src={icons.car_icon} alt="Icono de coche de reparto" />
           <h3 className="features__title">Envíos Gratis</h3>
           <p>En compras superiores a $50</p>
         </div>
         <div className="features__item">
-          <img src={cardImage} alt="Icono de tarjeta de crédito" />
+          <img src={icons.card_icon} alt="Icono de tarjeta de crédito" />
           <h3 className="features__title">Pagos Seguros</h3>
           <p>Múltiples métodos de pago disponibles</p>
         </div>
         <div className="features__item">
-          <img src={supportImage} alt="Icono de soporte al cliente" />
+          <img src={icons.support_icon} alt="Icono de soporte al cliente" />
           <h3 className="features__title">Soporte 24/7</h3>
           <p>Estamos aquí para ayudarte siempre</p>
         </div>
@@ -128,16 +133,40 @@ export function MainContent() {
       <h2 className="featured">Libros destacados</h2>
       <p className="featured"> Cada libro es una puerta. Elige la historia que
           quieres vivir hoy. </p>
+      <br />
+        
+      <section className="books-list">
+        {books.length === 0 ? (
+          <p>No hay libros disponibles.</p>
+        ) : (
+          <article className="books__grid">
+            {randomBooks.map((b) => {
+              return (
+                <div key={b.id} className="book-card">
+                  <img className="book-image" src={booksImageConst[b.imageKey]} alt={`Portada del libro ${b.title}`} />
+                  <h3 className="book-description">{b.title}</h3>
+                  <p className="book-author">{b.author}</p>
+                  <p className="book-rating" aria-label="Valoración: 4.8 de 5 estrellas">⭐⭐⭐⭐⭐ 4.8</p>
+                  <div className="price-container">
+                    <p className="book-price">$ 60.000</p>
+                      <img className="image-cart" src={icons.add_cart_icon} />
+                    <button type="button"> </button>
+                  </div>
+                </div>
+              );
+            })}
+          </article>
+        )}
+      </section>
 
-      <section className="book-list">
-        <article className="book-card">
+        {/* <article className="book-card">
           <img src={bookSusurro} alt="Portada del libro El Susurro de las páginas" />
           <h3 className="book-description">El Susurro de las páginas</h3>
           <p className="book-author">María Garcia</p>
           <p className="book-rating" aria-label="Valoración: 4.8 de 5 estrellas">⭐⭐⭐⭐⭐ 4.8</p>
           <div className="price-container">
             <p className="book-price">$ 60.000</p>
-              <img className="image-cart" src="/src/assets/iconcart.png"/>
+              <img className="image-cart" src={icons.add_cart_icon} />
             <button type="button"> </button>
           </div>
         </article>
@@ -174,17 +203,16 @@ export function MainContent() {
               <img className="image-cart"  src="/src/assets/iconcart.png"/>
             <button type="button"></button>
           </div>
-        </article>
-      </section>
-       <button className="button-all" type="button"> Ver todos los libros </button>
+        </article> */}
+       <button className="button-all" type="button" href='/categories'> Ver todos los libros </button>
     </main>
   );
 }
 
-export function EmailSubscription() {
+/* export function EmailSubscription() {
   return (
     <div className="email-subscription" aria-labelledby="newsletter-title">
-      <img className="image-email" src={emailImage} alt="Icono de sobre de correo" />
+      <img className="image-email" src={icons.email_icon} alt="Icono de sobre de correo" />
       <h2 className="title-suscribe">Suscríbete a nuestro newsletter</h2>
       <p id="newsletter-title">Recibe las últimas novedades y ofertas exclusivas y recomendaciones personalizadas directamente en tu correo.</p>
       <div className="subscription-form">
@@ -194,5 +222,5 @@ export function EmailSubscription() {
     </div>
   );
 }
-
+ */
 

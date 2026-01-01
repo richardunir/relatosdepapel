@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import "../styles/styleCart.css";
-import Header from "../components/header.jsx";
-import Footer from "../components/footer.jsx";
-import { Copyright } from "../components/footer.jsx";
-import Checkout from "../pages/checkout.jsx";
-import bookImage from "../assets/susurro.png"; // Cambia según tus libros
+import "@styles/styleCart.css";
+import bookImage from "@booksImagesPath/susurro.png"; // Cambia según tus libros
 
 function Cart() {
   const navigate = useNavigate();
@@ -69,7 +65,6 @@ function Cart() {
  
   return (
     <>
-      <Header />
       <div className="container">
         <div className="cart">
           {/* Indicador de pasos */}
@@ -188,8 +183,6 @@ function Cart() {
           </div>
         </div>
       </div>
-      <Footer />
-      <Copyright />
     </>
   );
 }

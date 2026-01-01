@@ -1,14 +1,10 @@
 import React from "react";
-import "../styles/styleCheckout.css";
-import Header from "../components/header.jsx";
-import Footer from "../components/footer.jsx";
-import { Copyright } from "../components/footer.jsx";
-import bookSusurro from "../assets/susurro.png";
+import "@styles/styleCheckout.css";
+import bookSusurro from "@booksImagesPath/susurro.png";
 
 function Checkout() {
   return (
     <>
-      <Header />
       <div className="container">
         <div className="checkout">
           <div className="checkout__steps">
@@ -85,8 +81,6 @@ function Checkout() {
           </div>
         </div>
       </div>
-      <Footer />
-      <Copyright />
     </>
   );
 }
