@@ -1,14 +1,10 @@
-import "../styles/styleviewbook.css";
-import Images from "../assets/images.jpg";
-import bookSusurro from "../assets/susurro.png";
-import bookCronicas from "../assets/cronicas.png";
-import bookAmor from "../assets/amor.png";
-import bookMisterios from "../assets/misterios.png";
-import bookLucifer from "../assets/pedro-escamilla-lucifer.png"
-import bookPinocho from "../assets/pinocho.png"
-import Header from "../components/header.jsx";
-import Footer from "../components/footer.jsx";
-import { Copyright } from "../components/footer.jsx";
+import "@styles/styleviewbook.css";
+import bookSusurro from "@booksImagesPath/susurro.png";
+import bookCronicas from "@booksImagesPath/cronicas.png";
+import bookAmor from "@booksImagesPath/amor.png";
+import bookMisterios from "@booksImagesPath/misterios.png";
+import bookLucifer from "@assets/pedro-escamilla-lucifer.png"
+import bookPinocho from "@assets/pinocho.png"
 
 // Imágenes temporales
 const libroMini = "https://via.placeholder.com/150x200";
@@ -115,11 +111,8 @@ export function LibrosDestacadosSection() {
 export default function Viewbook() {
     return (
         <div className="viewbook">
-            <Header />
             <DetalleLibroSection />
             <LibrosDestacadosSection />
-            <Footer />
-            <Copyright />
         </div>
     );
 }

@@ -1,5 +1,14 @@
 export default function Footer() {
   return (
+    <>
+      <InformationFooter />
+      <Copyright />
+    </>
+  );
+}
+
+export function InformationFooter() {
+  return (
     <footer className="footer">
       <div className="footer__brand">
         <h3 className="footer__title">Relatos de Papel</h3>

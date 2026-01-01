@@ -10,6 +10,7 @@ export default defineConfig({
       '@resources': path.resolve(__dirname, './src/resources/'),
       '@assets': path.resolve(__dirname, './src/resources/assets/'),
       '@booksImagesPath': path.resolve(__dirname, './src/resources/assets/books_image/'),
+      '@iconsPath': path.resolve(__dirname, './src/resources/assets/icons/'),
       '@components': path.resolve(__dirname, './src/components/'),
       '@utils': path.resolve(__dirname, './src/utils/'),
       '@pages': path.resolve(__dirname, './src/pages/'),

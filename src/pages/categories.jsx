@@ -1,26 +1,25 @@
 import "@styles/categories.css";
 /* import { useEffect, useState } from "react"; */
-import Footer from "@components/footer";
-import Header from "@components/header";
-import emailImage from "@assets/email.png";
 import booksJson from "@resources/books_data.json";
-import { booksImagesConstants } from "@utils/constants";
+import { booksImagesConstants } from "@utils/booksConstants";
+import { IconConstants } from "@utils/iconConstants";
+import { EmailSubscription } from "@components/email_section";
 
 const booksImageConst = booksImagesConstants;
+const icons = IconConstants;
 
 function Categories() {
   const books = booksJson.books || [];
-
+  console.log(books[0]);
+  
   /* useEffect(() => {
     localStorage.setItem("books", JSON.stringify(books));
   }, [books]); */
 
   return (
     <>
-      <Header />
       <SectionTitle />
       <MainContent books={books} />
-      <Footer />
     </>
   );
 }
@@ -35,17 +34,17 @@ export function SectionTitle() {
             <br />
             <div className="info__values">
               <span className="values_icons">
-                <img src="src/assets/icono_exponencial.png" alt="Icono de lectores" />
+                <img src={icons.exponential_icon} alt="Icono de lectores" />
                 <p>10,000+ Lectores activos</p>
               </span>
               <span className="values_icons">
-                <img src="src/assets/cantidad_libros.png" alt="Icono de lectores" />
+                <img src={icons.amount_icon} alt="Icono de lectores" />
                 <p>5,000+ Libros disponibles</p>
               </span>
             </div>
           </div>
           <div className="title__image">
-            <img src="src/assets/libreria.jpg" alt="Imagen de librería" />
+            <img src={booksImageConst.library_icon_2} alt="Imagen de librería" />
           </div>
         </section>
     );
@@ -151,20 +150,6 @@ export function BookCard({ books = [] }) {
         </div>
       )}
     </div>
-  );
-}
-
-export function EmailSubscription() {
-  return (
-    <section className="email__section" aria-labelledby="newsletter-title">
-      <img className="section__icon" src={emailImage} alt="Icono de sobre de correo" />
-      <h2 className="section__title">Suscríbete a nuestro newsletter</h2>
-      <p id="section__info">Recibe las últimas novedades y ofertas exclusivas y recomendaciones personalizadas directamente en tu correo.</p>
-      <div className="section__form">
-        <input type="email" className="form_email" id="email-input" placeholder="tucorreo@email.com" aria-label="Introduce tu correo electrónico" />
-        <button className="form__button" type="submit"> Suscribirse </button>
-      </div>
-    </section>
   );
 }
 

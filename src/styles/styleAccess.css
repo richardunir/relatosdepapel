@@ -1,69 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
-/* Utilitarios */
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.font-bold { font-weight: bold; }
-
-/* ===========================
-   HEADER (BEM)
-   =========================== */
-.header__nav {
-  display: flex;
-  text-align: center;
-  margin-top: 0.4%;
-  /* Antes .header__nav aplicaba al contenedor flex, 
-     ahora el <ul> tiene la clase .header__menu para comportarse como flex container si es necesario,
-     pero mantenemos la estructura visual original donde nav es el flex principal */
-}
-
-.header__menu {
-    display: flex;
-    width: 100%; /* Asegura que ocupe el nav */
-    justify-content: space-between; /* Distribuye items y logos */
-}
-
-/* Elementos del menú */
-.header__item {
-  margin: 1% 0.8%;
-}
-
-.header__logo {
-  padding-right: 20%; 
-}
-
-/* Iconos de acción */
-.header__icon-btn {
-  padding-top: 1%;
-  padding-left: 1%;
-  display: inline-block; /* Asegura que los enlaces con img se comporten bien */
-}
-
-.header__icon-btn--search {
-    padding-top: 1%;
-    margin-right: -6%;
-    margin-top: -1%;
-}
-
-.header__icon-btn--profile {
-    padding-top: 1%;
-    margin-left: 30%;
-}
-
-.header__icon-btn--cart {
-    padding-top: 0.6%;
-}
-
 /* ===========================
    HERO (BEM)
    =========================== */
@@ -126,6 +60,8 @@ a {
   border-radius: 3%;
   margin-right: 3%;
   margin-top: 12%;
+  width: 50%;
+  height: 50%;
 }
 
 .hero__highlight-card {
@@ -181,6 +117,17 @@ a {
   text-align: center;
   margin: 4% 2%;
 }
+
+.books__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.book-image {
+  border-radius: 8px;
+  width: 60%;
+} 
 
 .book-card__title {
   padding-bottom: 4%;
@@ -242,13 +189,6 @@ a {
   background: #000;
   color: #fafafa;
   display: inline-flex; 
-}
-
-.btn--subscribe {
-  background: #fafafa;
-  margin: -3.2% 34% 0% 54%;
-  padding: 1% 3% 1% 3%;
-  border: 0.15rem solid #000;
 }
 
 /* Newsletter */
@@ -353,25 +293,6 @@ a {
 
 /* Tablet (max 768px) */
 @media (max-width: 768px) {
-  .header__nav {
-    justify-content: space-around;
-  }
-
-  /* Ocultar elementos del menú excepto el logo */
-  .header__item:not(.header__logo) {
-    display: none;
-  }
-  
-  .header__logo {
-     padding-right: 0;
-     display: block; 
-  }
-
-  /* El CSS original usaba .header__actions, pero en el HTML todo está dentro del UL. 
-     Para mantener los iconos visibles en móvil, apuntamos a los botones de icono */
-  .header__icon-btn {
-      display: inline-block; /* Asegurar que se vean */
-  }
 
   .hero {
     display: flex;
@@ -418,11 +339,11 @@ a {
     z-index: 10;
   }
   
-   @media (max-width: 768px) and (min-width: 481px) {
-      .hero__highlight-card {
-         position: absolute;
-         top: 66%;
-      }
+  @media (max-width: 768px) and (min-width: 481px) {
+    .hero__highlight-card {
+        position: absolute;
+        top: 66%;
+    }
    }
 
   .btn--subscribe {

@@ -15,6 +15,8 @@ import amor from '@booksImagesPath/amor.png';
 import misterio from '@booksImagesPath/misterios.png';
 import cronicas from '@booksImagesPath/cronicas.png';
 import susurro from '@booksImagesPath/susurro.png';
+import libraryIcon1 from '@booksImagesPath/library.png';
+import libraryIcon2 from '@booksImagesPath/library.jpg';
 
 export const booksImagesConstants = {
     "cien_anos_soledad": cien_anos_soledad,
@@ -33,5 +35,7 @@ export const booksImagesConstants = {
     "amor": amor,
     "misterio": misterio,
     "cronicas": cronicas,
-    "susurro": susurro
+    "susurro": susurro,
+    "library_icon_1": libraryIcon1,
+    "library_icon_2": libraryIcon2
 }
