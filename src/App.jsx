@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Router>
         <Routes>
-          <Route path="/" element={<Access />} />
+          <Route path="/" element={<Categories />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/access" element={<Access />} />
           <Route path="/cart" element={<Cart />} />

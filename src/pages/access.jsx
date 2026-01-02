@@ -140,16 +140,18 @@ function MainContent() {
           <article className="list__book">
             {randomBooks.map((b) => {
               return (
-                <div key={b.id} className="book__card">
+                <div key={b.id} className="book__card__access" href="/viewbook">
                   <img className="book__image" src={booksImageConst[b.imageKey]} alt={`Portada del libro ${b.title}`} />
-                  <h3 className="book__title">{b.title}</h3>
-                  <p className="book__author">{b.author}</p>
-                  <div className="book__stars">
-                    {renderStartElements(b.stars, "book")} {b.stars}
-                  </div>
-                  <div className="book__price">
-                    <p className="price__value">{b.price}</p>
-                      <img className="price__image" src={icons.add_cart_icon} />
+                  <div className="book__information">                  
+                    <h3 className="book__title">{b.title}</h3>
+                    <p className="book__author">{b.author}</p>
+                    <div className="book__stars">
+                      {renderStartElements(b.stars, "book")} {b.stars}
+                    </div>
+                    <div className="book__price">
+                      <p className="price__value">{b.price}</p>
+                        <img className="price__image" src={icons.add_cart_icon} />
+                    </div>
                   </div>
                 </div>
               );

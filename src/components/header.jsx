@@ -31,13 +31,14 @@ export default function Header() {
             <a href="#sobre-nosotros">Sobre nosotros</a>
           </li>
 
-          <a className="header__icon-btn header__icon-btn--search" href="/viewbook">
-            <img src={icons.search_icon} />
-          </a>
-          <a className="header__icon-btn header__icon-btn--profile" href="/">
+          <form action="/viewbook" method="GET">
+            <input className="header__icon__search" name="search_book" type="text" placeholder="Libroxxx" />
+          </form>
+          
+          <a className="header__icon-btn--profile" href="/">
             <img src={icons.profile_icon} alt="Perfil" />
           </a>
-          <a className="header__icon-btn header__icon-btn--cart" href="/cart">
+          <a className="header__icon-btn--cart" href="/cart">
             <img src={icons.cart_icon} alt="Carrito" />
           </a>
         </ul>
