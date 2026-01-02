@@ -117,17 +117,18 @@
   gap: 20px;
 }
 
-.book__card {
-  border-radius: 8px;
+.book__card__access {
+  border-radius: 2rem;
   padding: 2% 2% 4% 2%;
   text-align: center;
   transition: transform 160ms ease, box-shadow 160ms ease;
+  height: fit-content;
 }
 
 .book__image {
-  border-radius: 8px;
-  width: 80%;
-  margin: 2%;
+  border-radius: 2rem;
+  width: 100%;
+  max-height: 400px;
   object-fit: cover;
 }
 
