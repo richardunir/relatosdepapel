@@ -21,8 +21,12 @@
 }
 
 .header__logo {
-  padding-right: 20%;
-  text-align: center;
+  margin: 0.5% 10% 0% 0.8%;
+  display: inline-flex;
+}
+
+.logo__inf {
+    align-content: center;
 }
 
 /* Iconos de acción */

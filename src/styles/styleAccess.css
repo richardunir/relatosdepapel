@@ -51,17 +51,15 @@
   justify-content: flex-end;
   position: relative;
   display: inline-block;
-  margin-left: 64%;
+  margin: 5% 1% 5% 64%;
 }
 
 .hero__image {
   height: auto;
   display: block;
   border-radius: 3%;
-  margin-right: 3%;
-  margin-top: 12%;
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: auto;
 }
 
 .hero__highlight-card {
@@ -99,63 +97,104 @@
   padding-bottom: 4%;
 }
 
-.section-title {
-  margin-top: 2%;
-  font-weight: bold;
+.features__detail {
   text-align: center;
+  color: #666;
 }
 
-.section-subtitle {
-  margin: 1% 1.2%;
-  text-align: center;
+.list__title {
+  font-weight: bold;
+}
+
+.list__subtitle {
+  color: #666;
 }
 
 /* Book List / Card */
-.book-list {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin: 4% 2%;
-}
-
-.books__grid {
+.list__book {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-.book-image {
+.book__card {
   border-radius: 8px;
-  width: 60%;
-} 
-
-.book-card__title {
-  padding-bottom: 4%;
-  text-align: start;
+  padding: 2% 2% 4% 2%;
+  text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.book-card__author,
-.book-card__rating {
-  text-align: start;
+.book__image {
+  border-radius: 8px;
+  width: 80%;
+  margin: 2%;
+  object-fit: cover;
 }
 
-.book-card__rating {
+.book__title {
   margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: start;
 }
 
-.book-card__actions {
+.book__author,
+.book__stars {
+  text-align: start;
+}
+
+.book__author {
+  color: #666;
+  margin-bottom: 2%;
+}
+
+.book__card__actions {
   display: flex;
   justify-content: space-between;
   text-align: center;
   margin-top: 4%;
 }
 
-.book-card__price {
+.book__card__price {
   margin-top: 4%;
 }
 
-.book-card__cart-icon {
+.book__card__cart-icon {
   margin-left: 32%;
+}
+
+.book__price {
+  display: flex;
+  align-items: center;
+}
+
+.price__image {
+  margin-left: 40%;
+}
+
+.content__redirectCategories {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.redirectCategories__option {
+  border-radius: 10px;
+  background-color: #000;
+  color: #fafafa;
+  cursor: pointer;
+  padding: 1% 1%;
+}
+
+.content__access__email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 251, 235, 0.75);
+  gap: 15px;
+  width: 95%;
+  text-align: center;
+  margin: 0% 2% 0% 2%;
+  padding: 2% 2% 2% 2%;
 }
 
 /* Buttons */
@@ -168,7 +207,7 @@
 }
 
 .btn--primary {
-  padding: 4% 6% 4% 7%;
+  padding: 4% 6%;
   background: #000;
   color: #fafafa;
   border: none;
@@ -176,8 +215,8 @@
 }
 
 .btn--secondary {
-  padding: 4% 4% 4% 5%;
-  width: 30%;
+  padding: 4% 5%;
+  width: 40%;
   background: #fafafa;
   border: 0.15rem solid #000;
   color: #000000;
@@ -188,103 +227,7 @@
   padding: 1% 2% 1% 2%;
   background: #000;
   color: #fafafa;
-  display: inline-flex; 
-}
-
-/* Newsletter */
-.newsletter {
-  background: rgba(255, 251, 235, 0.75);
-  text-align: center;
-  padding: 2%; 
-}
-
-.newsletter__icon {
-  margin-top: 2%;
-}
-
-.newsletter__title {
-  font-weight: bold;
-  margin-top: 1%;
-}
-
-.newsletter__text {
-   margin: 1% 1.2%; 
-   text-align: center;
-}
-
-.newsletter__form {
-  display: flex;
-  flex-direction: column;
-  gap: 1%;
-}
-
-.newsletter__input {
-    border-radius: 1rem;
-    padding: 1% 8% 1% 1%;
-    margin: 2% 50% 0% 28%;
-    margin-top: 2%;
-}
-
-.newsletter__input--search {
-    border-radius: 1rem;
-    padding: 8% 8% 10% 48%;
-    margin: 0% 0% 8% 20%;
-    margin-top: 0%;
-}
-
-/* ===========================
-   FOOTER (BEM)
-   =========================== */
-.footer {
-  display: flex;
-  margin: 1% 1.2%;
-  padding-top: 2%;
-}
-
-.footer__brand {
-  margin-left: 2%;
-}
-
-.footer__column {
-  margin-left: 8%;
-  text-align: start;
-}
-
-/* Modificador para la columna de ayuda */
-.footer__column--help {
-  margin-left: 18%;
-  margin-right: 14%;
-}
-
-.footer__title {
-  padding-bottom: 4%;
-  font-weight: bold;
-  text-align: left;
-}
-
-.footer__text {
-  text-align: left;
-}
-
-/* Títulos de las listas en el footer */
-.footer__list-title {
-  margin: 2% 0%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  font-weight: bold;
-}
-
-/* Elementos de la lista (items) */
-.footer__item {
-  margin: 2% 0%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  /* font-weight: bold;  <-- Opcional: El CSS original lo tenía, descomentar si es necesario */
-}
-
-.copyright {
-  text-align: center;
-  padding: 2%;
+  display: inline-flex;
 }
 
 /* ===========================
@@ -331,23 +274,19 @@
   .hero__highlight-card {
     position: static;
     margin-top: 1rem;
-    top: auto; 
+    top: auto;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 3% 5%;
     border-radius: 8%;
     box-shadow: 0 1% 1.2% rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
-  
+
   @media (max-width: 768px) and (min-width: 481px) {
     .hero__highlight-card {
-        position: absolute;
-        top: 66%;
+      position: absolute;
+      top: 66%;
     }
-   }
-
-  .btn--subscribe {
-    margin: -4.6% 2% 2% 60%;
   }
 
   .btn--load-more {
@@ -364,31 +303,13 @@
   .book-card {
     flex-basis: 45%;
   }
-
-  .footer {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .footer__brand,
-  .footer__column {
-    flex-basis: 45%;
-    margin: 1rem 0;
-    text-align: center;
-  }
-
-  .footer__title,
-  .footer__text {
-    text-align: center;
-  }
 }
 
 /* Mobile (max 480px) */
 @media (max-width: 480px) {
+
   .features,
-  .book-list,
-  .footer {
+  .book-list {
     flex-direction: column;
     align-items: center;
   }
@@ -411,24 +332,6 @@
   .btn--load-more {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .newsletter__form {
-    align-items: center;
-  }
-
-  .newsletter__input {
-    width: 90%;
-    text-align: center;
-    padding: 3%;
-    margin: 2% 0;
-  }
-
-  .btn--subscribe {
-    position: static;
-    margin: 2% 0;
-    width: 60%;
-    margin: 0.4% 2% 2% 19%; 
   }
 
   .book-card__cart-icon {

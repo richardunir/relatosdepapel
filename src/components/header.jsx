@@ -10,9 +10,9 @@ export default function Header() {
         
         <ul className="header__menu">
 
-          <li className="header__item header__logo">
-            <img className="header__logo-img" src={icons.book_logo_icon} />
-            <a className="header__logo-inf" href="/">Relatos de papel</a>
+          <li className="header__logo">
+            <img className="logo__img" src={icons.book_logo_icon} />
+            <a className="logo__inf" href="/">Relatos de papel</a>
           </li>
 
           <li className="header__item">

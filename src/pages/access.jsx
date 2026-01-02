@@ -4,6 +4,7 @@ import "@styles/styleAccess.css";
 import booksJson from "@resources/books_data.json";
 import { booksImagesConstants } from "@utils/booksConstants";
 import { IconConstants } from "@utils/iconConstants";
+import { renderStartElements } from "@utils/utils";
 import { EmailSubscription } from "@components/email_section";
 
 const books = booksJson.books || [];
@@ -59,15 +60,11 @@ function Access() {
     <div className="components-access">
       <HeroSection/>
       <MainContent/>
-      <EmailSubscription/>
     </div>
   );
 }
-export default Access;
 
-
-
-export function HeroSection() {
+function HeroSection() {
   const book_of_month = books[0] || {};
   return (
     <div className="hero" aria-labelledby="hero-title">
@@ -77,8 +74,8 @@ export function HeroSection() {
           títulos esperando por ti.
         </p>
         <div className="hero__actions">
-          <button className="btn btn--primary" type="button" href="/categories">Explorar Libreria</button>
-          <button className="btn btn--secondary" type="button">Ver Novedades</button>
+          <a className="btn btn--primary" href="/categories">Explorar Libreria</a>
+          <a className="btn btn--secondary" type="button">Ver Novedades</a>
         </div>
         <div className="hero__stats">
           <p className="hero__stat-number">5000+</p>
@@ -92,14 +89,14 @@ export function HeroSection() {
         <div className="hero__highlight-card">
           <p className="hero__highlight-text">Libro del mes</p>
           <p className="hero__highlight-title font-bold">{book_of_month.title}</p>
-          <p className="hero__highlight-rating">⭐⭐⭐⭐⭐ 4.9</p>
+          {renderStartElements(book_of_month.stars, "hero__highlight")} {book_of_month.stars}
         </div>
       </div>
     </div>
   );
 }
 
-export function MainContent() {
+function MainContent() {
   const randomBooks = useMemo(() => getRandomSample(books, 4), [books]);
 
   return (
@@ -111,46 +108,48 @@ export function MainContent() {
         <div className="features__item">
           <img src={icons.book_icon} alt="Icono de libro" />
           <h3 className="feature-title">Amplio catálogo</h3> 
-          <p>Miles de títulos en todos los géneros literarios</p>
+          <p className="features__detail">Miles de títulos en todos los géneros literarios</p>
         </div>
         <div className="features__item">
           <img src={icons.car_icon} alt="Icono de coche de reparto" />
           <h3 className="features__title">Envíos Gratis</h3>
-          <p>En compras superiores a $50</p>
+          <p className="features__detail">En compras superiores a $50</p>
         </div>
         <div className="features__item">
           <img src={icons.card_icon} alt="Icono de tarjeta de crédito" />
           <h3 className="features__title">Pagos Seguros</h3>
-          <p>Múltiples métodos de pago disponibles</p>
+          <p className="features__detail">Múltiples métodos de pago disponibles</p>
         </div>
         <div className="features__item">
           <img src={icons.support_icon} alt="Icono de soporte al cliente" />
           <h3 className="features__title">Soporte 24/7</h3>
-          <p>Estamos aquí para ayudarte siempre</p>
+          <p className="features__detail">Estamos aquí para ayudarte siempre</p>
         </div>
       </section>
-
-      <h2 className="featured">Libros destacados</h2>
-      <p className="featured"> Cada libro es una puerta. Elige la historia que
-          quieres vivir hoy. </p>
-      <br />
         
-      <section className="books-list">
+      <section className="books__list">
+        <h2 className="list__title">Libros destacados</h2>
+        <br />
+        <p className="list__subtitle"> Cada libro es una puerta. Elige la historia que
+            quieres vivir hoy. </p>
+        <br />
+        <br />
         {books.length === 0 ? (
           <p>No hay libros disponibles.</p>
         ) : (
-          <article className="books__grid">
+          <article className="list__book">
             {randomBooks.map((b) => {
               return (
-                <div key={b.id} className="book-card">
-                  <img className="book-image" src={booksImageConst[b.imageKey]} alt={`Portada del libro ${b.title}`} />
-                  <h3 className="book-description">{b.title}</h3>
-                  <p className="book-author">{b.author}</p>
-                  <p className="book-rating" aria-label="Valoración: 4.8 de 5 estrellas">⭐⭐⭐⭐⭐ 4.8</p>
-                  <div className="price-container">
-                    <p className="book-price">$ 60.000</p>
-                      <img className="image-cart" src={icons.add_cart_icon} />
-                    <button type="button"> </button>
+                <div key={b.id} className="book__card">
+                  <img className="book__image" src={booksImageConst[b.imageKey]} alt={`Portada del libro ${b.title}`} />
+                  <h3 className="book__title">{b.title}</h3>
+                  <p className="book__author">{b.author}</p>
+                  <div className="book__stars">
+                    {renderStartElements(b.stars, "book")} {b.stars}
+                  </div>
+                  <div className="book__price">
+                    <p className="price__value">{b.price}</p>
+                      <img className="price__image" src={icons.add_cart_icon} />
                   </div>
                 </div>
               );
@@ -159,68 +158,16 @@ export function MainContent() {
         )}
       </section>
 
-        {/* <article className="book-card">
-          <img src={bookSusurro} alt="Portada del libro El Susurro de las páginas" />
-          <h3 className="book-description">El Susurro de las páginas</h3>
-          <p className="book-author">María Garcia</p>
-          <p className="book-rating" aria-label="Valoración: 4.8 de 5 estrellas">⭐⭐⭐⭐⭐ 4.8</p>
-          <div className="price-container">
-            <p className="book-price">$ 60.000</p>
-              <img className="image-cart" src={icons.add_cart_icon} />
-            <button type="button"> </button>
-          </div>
-        </article>
-        <article className="book-card">
-          <img src={bookCronicas} alt="Portada del libro Crónicas del tiempo" />
-          <h3 className="book-description">Crónicas del tiempo</h3>
-          <p className="book-author">Carlos Ruiz</p>
-          <p className="book-rating" aria-label="Valoración: 4.9 de 5 estrellas">⭐⭐⭐⭐⭐ 4.9</p>
-          <div className="price-container">
-            <p className="book-price">$ 90.000</p>
-              <img className="image-cart" src="/src/assets/iconcart.png"/>
-            <button type="button"></button>
-          </div>
-        </article>
-        <article className="book-card">
-          <img src={bookMisterios} alt="Portada del libro Misterios de medianoche" />
-          <h3 className="book-description">Misterios de medianoche</h3>
-          <p className="book-author">Ana Martínez</p>
-          <p className="book-rating" aria-label="Valoración: 4.7 de 5 estrellas">⭐⭐⭐⭐⭐ 4.7</p>
-          <div className="price-container">
-            <p className="book-price">$ 70.000</p>
-              <img className="image-cart" src="/src/assets/iconcart.png"/>
-            <button type="button"></button>
-          </div>
+      <section className="content__redirectCategories">
+        <a className="redirectCategories__option" href='/categories'>Ver todos los libros</a>
+      </section>
 
-        </article>
-        <article className="book-card">
-          <img src={bookAmor} alt="Portada del libro Amor en las estrellas" />
-          <h3 className="book-description">Amor en las estrellas</h3>
-          <p className="book-author">Laura Fernández</p>
-          <p className="book-rating" aria-label="Valoración: 4.6 de 5 estrellas">⭐⭐⭐⭐⭐ 4.6</p>
-          <div className="price-container">
-            <p className="book-price">$ 80.000</p>
-              <img className="image-cart"  src="/src/assets/iconcart.png"/>
-            <button type="button"></button>
-          </div>
-        </article> */}
-       <button className="button-all" type="button" href='/categories'> Ver todos los libros </button>
+      <section className="content__access__email">
+        {<EmailSubscription />}
+      </section>
     </main>
   );
 }
 
-/* export function EmailSubscription() {
-  return (
-    <div className="email-subscription" aria-labelledby="newsletter-title">
-      <img className="image-email" src={icons.email_icon} alt="Icono de sobre de correo" />
-      <h2 className="title-suscribe">Suscríbete a nuestro newsletter</h2>
-      <p id="newsletter-title">Recibe las últimas novedades y ofertas exclusivas y recomendaciones personalizadas directamente en tu correo.</p>
-      <div className="subscription-form">
-        <input type="email" id="email-input" placeholder="tucorreo@email.com" aria-label="Introduce tu correo electrónico"/>
-        <button className="button-suscribe" type="submit"> Suscribirse </button>
-      </div>  
-    </div>
-  );
-}
- */
+export default Access;
 

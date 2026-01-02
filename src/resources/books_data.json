@@ -6,8 +6,9 @@
             "author": "Gabriel García Márquez",
             "genre": "Realismo mágico",
             "published_year": 1967,
-            "value": "$150.000",
+            "price": "$150.000",
             "imageKey": "cien_anos_soledad",
+            "stars": 4.8,
             "description": "Una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo."
         },
         {
@@ -16,8 +17,9 @@
             "author": "Miguel de Cervantes",
             "genre": "Novela",
             "published_year": 1605,
-            "value": "$200.000",
+            "price": "$200.000",
             "imageKey": "quijote_de_la_mancha",
+            "stars": 4.7,
             "description": "La historia de un hidalgo que, enloquecido por la lectura de libros de caballerías, decide convertirse en caballero andante."
         },
         {
@@ -26,8 +28,9 @@
             "author": "Carlos Ruiz Zafón",
             "genre": "Misterio",
             "published_year": 2001,
-            "value": "$180.000",
+            "price": "$180.000",
             "imageKey": "la_sombra_viento",
+            "stars": 4.3,
             "description": "Un joven llamado Daniel descubre un libro olvidado en el Cementerio de los Libros Olvidados y se ve envuelto en un misterio que abarca décadas."
         },
         {
@@ -36,8 +39,9 @@
             "author": "Jorge Luis Borges",
             "genre": "Cuentos",
             "published_year": 1944,
-            "value": "$120.000",
+            "price": "$120.000",
             "imageKey": "fricciones",
+            "stars": 4.9,
             "description": "Una colección de cuentos que exploran temas como la realidad, la identidad y el infinito, característicos del estilo de Borges."
         },
         {
@@ -46,8 +50,9 @@
             "author": "Isabel Allende",
             "genre": "Realismo mágico",
             "published_year": 1982,
-            "value": "$160.000",
+            "price": "$160.000",
             "imageKey": "casa_espiritus",
+            "stars": 4.8,
             "description": "Una saga familiar que mezcla elementos de realismo mágico con la historia política y social de Chile."
         },
         {
@@ -56,8 +61,9 @@
             "author": "Julio Cortázar",
             "genre": "Novela experimental",
             "published_year": 1963,
-            "value": "$140.000",
+            "price": "$140.000",
             "imageKey": "rayuela",
+            "stars": 4.5,
             "description": "Una novela que puede ser leída de múltiples maneras, explorando la vida de un grupo de amigos en París y Buenos Aires."
         },
         {
@@ -66,8 +72,9 @@
             "author": "Gabriel García Márquez",
             "genre": "Novela romántica",
             "published_year": 1985,
-            "value": "$170.000",
+            "price": "$170.000",
             "imageKey": "amor_tiempos_colera",
+            "stars": 4.6,
             "description": "Una historia de amor que se desarrolla a lo largo de más de cincuenta años, explorando la paciencia y la perseverancia del amor verdadero."
         },
         {
@@ -76,8 +83,9 @@
             "author": "Juan Rulfo",
             "genre": "Realismo mágico",
             "published_year": 1955,
-            "value": "$130.000",
+            "price": "$130.000",
             "imageKey": "pedro_paramo",
+            "stars": 4.7,
             "description": "Un joven llamado Juan Preciado viaja al pueblo de Comala para encontrar a su padre, Pedro Páramo, y descubre un lugar habitado por fantasmas."
         },
         {
@@ -86,8 +94,9 @@
             "author": "Ernesto Sabato",
             "genre": "Novela psicológica",
             "published_year": 1948,
-            "value": "$110.000",
+            "price": "$110.000",
             "imageKey": "tunel",
+            "stars": 4.4,
             "description": "La historia de un pintor obsesionado con una mujer, explorando temas de alienación y locura."
         },
         {
@@ -96,8 +105,9 @@
             "author": "Mario Vargas Llosa",
             "genre": "Novela",
             "published_year": 1963,
-            "value": "$190.000",
+            "price": "$190.000",
             "imageKey": "ciudad_perros",
+            "stars": 4.5,
             "description": "Una crítica a la vida militar en Perú, centrada en un grupo de cadetes en una academia militar."
         },
         {
@@ -106,7 +116,7 @@
             "author": "María García",
             "genre": "Cuentos",
             "published_year": 1949,
-            "value": "$60.000",
+            "price": "$60.000",
             "imageKey": "susurro",
             "stars": 4.8,
             "description": "Una colección de cuentos que exploran conceptos filosóficos y metafísicos a través de narrativas complejas."
@@ -117,7 +127,7 @@
             "author": "Javier Romero",
             "genre": "Novela romántica",
             "published_year": 1960,
-            "value": "$90.000",
+            "price": "$90.000",
             "imageKey": "cronicas_tiempo",
             "stars": 4.9,
             "description": "La historia de un viudo que encuentra el amor nuevamente en su rutina diaria, explorando temas de soledad y esperanza."
@@ -128,7 +138,7 @@
             "author": "Ana Martínez",
             "genre": "Novela",
             "published_year": 1961,
-            "value": "$70.000",
+            "price": "$70.000",
             "imageKey": "misterios_media_noche",
             "stars": 4.7,
             "description": "La historia de un coronel retirado que espera una pensión que nunca llega, reflejando la injusticia y la esperanza."
@@ -139,7 +149,7 @@
             "author": "Luna Villa",
             "genre": "Novela",
             "published_year": 1998,
-            "value": "$80.000",
+            "price": "$80.000",
             "imageKey": "amor_estrellas",
             "stars": 4.6,
             "description": "Una novela que sigue las vidas de dos poetas jóvenes en México, explorando la literatura y la juventud."

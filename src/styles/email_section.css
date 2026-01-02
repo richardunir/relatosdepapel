@@ -1,6 +1,67 @@
-.btn--subscribe {
-  background: #fafafa;
-  margin: -3.2% 34% 0% 54%;
-  padding: 1% 3% 1% 3%;
-  border: 0.15rem solid #000;
+.subscription__title {
+    font-weight: bold;
+}
+
+.subscription__subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2%;
+}
+
+.subscription__form {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    margin: 0% 10% 0% 10%;
+}
+
+.form__email {
+    width: 80%;
+    padding: 2% 4%;
+    box-sizing: border-box;
+    border: 0.15rem solid #666;
+}
+
+.form__email--search {
+    border-radius: 1rem;
+}
+
+.form__button {
+    background: #000000;
+    border: 0.15rem solid #666;
+    border-radius: 1rem;
+    color: #ffffff;
+    padding: 2% 4%;
+}
+
+/* ===========================
+   MEDIA QUERIES
+   =========================== */
+
+/* Tablet (max 768px) */
+@media (max-width: 768px) {
+    .form__button {
+        margin: -4.6% 2% 2% 60%;
+    }
+}
+
+/* Mobile (max 480px) */
+@media (max-width: 480px) {
+    .subscription__form {
+        align-items: center;
+    }
+
+    .form__email {
+        width: 90%;
+        text-align: center;
+        padding: 3%;
+        margin: 2% 0;
+    }
+
+    .form__button {
+        position: static;
+        margin: 2% 0;
+        width: 60%;
+        margin: 0.4% 2% 2% 19%;
+    }
 }
