@@ -63,6 +63,18 @@
     background-position: 10px center; /* Posición: 10px desde la izq, centrado vertical */
 }
 
+.header__icon-btn--cart--count {
+    background: #000;
+    color: #FFF;
+    padding: 4px;
+    border-radius: 100%;
+    font-size: 10px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 19px;
+}
+
 /* ===========================
    MEDIA QUERIES
    =========================== */
