@@ -1,53 +1,17 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "@styles/styleCart.css";
-import bookImage from "@booksImagesPath/susurro.png"; 
 import useCart from "../hooks/useCart";
+import { booksImagesConstants } from "@utils/booksConstants";
 
 function Cart() {
   const navigate = useNavigate();
-  const { cartItems, removeFromCart, addToCart, clearCartItems } = useCart();
-  
-  // Estado para manejar los productos del carrito
-  /*const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      title: "Libro 1",
-      author: "Autor",
-      price: 45000,
-      quantity: 1,
-      image: bookImage,
-    },
-    
-  ]);*/
+  const { cartItems, removeFromCart, clearCartItems } = useCart();
 
-  // Función para incrementar cantidad
-  const incrementQuantity = (item) => {
-    addToCart(item)
-    /*setCartItems(
-      cartItems.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-      )
-    );*/
-  };
-
-  // Función para decrementar cantidad
-  const decrementQuantity = (id) => {
-    removeFromCart(id)
-    /*
-    setCartItems(
-      cartItems.map((item) =>
-        item.id === id && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-    );*/
-  };
 
   // Función para eliminar producto
   const removeItem = (id) => {
     removeFromCart(id)
-    //setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
   // Función para anular selección de todos
@@ -55,17 +19,44 @@ function Cart() {
     clearCartItems();
   };
 
+  //Función para obtener el precio numérico
+  const getPriceAsNumber = (price) => {
+    // Si es undefined o null, retornar 0
+    if (price === undefined || price === null) {
+      console.warn('Precio no definido:', price);
+      return 0;
+    }
+  // Si ya es un número, retornarlo
+  if (typeof price === 'number') {
+    return price;
+  }
+  // Si es string, limpiar y convertir
+  if (typeof price === 'string') {
+    // Remover todo excepto números
+    const cleaned = price.replace(/[^0-9]/g, '');
+    const numPrice = parseInt(cleaned, 10);
+    return isNaN(numPrice) ? 0 : numPrice;
+  }
+  console.warn('Tipo de precio no reconocido:', typeof price, price);
+    return 0;
+  };
+
   // Calcular subtotal
   const calculateSubtotal = () => {
     return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
+      (total, item) => {
+        const price = getPriceAsNumber(item.price);
+        const quantity = item.quantity || 1;
+        return total + (price * quantity);
+      },
       0
     );
   };
 
   // Formatear precio
   const formatPrice = (price) => {
-    return `$ ${price.toLocaleString("es-CO")}`;
+    const numPrice = getPriceAsNumber(price);
+    return `$ ${numPrice.toLocaleString("es-CO")}`;
   };
 
  
@@ -102,67 +93,45 @@ function Cart() {
             ) : (
               <>
                 <div className="cart__items">
-                  {cartItems.map((item) => (
-                    <div key={item.id} className="cart__item">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="cart__item-image"
-                      />
-                      <div className="cart__item-details">
-                        <h3 className="cart__item-title">{item.title}</h3>
-                        <p className="cart__item-author">{item.author}</p>
-                        <p className="cart__item-price">
-                          {formatPrice(item.price)}
-                        </p>
+                  {cartItems.map((item) => {
+                    const itemPrice = getPriceAsNumber(item.price);
+                    const itemQuantity = item.quantity || 1;
+                    const itemTotal = itemPrice * itemQuantity;
+                    
+                    return (
+                      <div key={item.id} className="cart__item">
+                        <img
+                          src={item.imageKey ? booksImagesConstants[item.imageKey] : item.image}
+                          alt={item.title}
+                          className="cart__item-image"
+                        />
+                        <div className="cart__item-details">
+                          <h3 className="cart__item-title">{item.title}</h3>
+                          <p className="cart__item-author">{item.author}</p>
+                          <p className="cart__item-price">
+                            {formatPrice(itemPrice)}
+                          </p>
 
-                        {/* Control de cantidad */}
-                        <div className="cart__item-quantity">
-                          <button
-                            className="cart__quantity-btn"
-                            onClick={() => decrementQuantity(item.id)}
-                            disabled={item.quantity === 1}
-                          >
-                            −
-                          </button>
-                          <span className="cart__quantity-value">
-                            {item.quantity}
+                          {/* Acciones del item */}
+                          <div className="cart__item-actions">
+                            <button
+                              className="cart__action-btn"
+                              onClick={() => removeItem(item.id)}
+                            >
+                              Eliminar
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Precio total del item */}
+                        <div className="cart__item-total">
+                          <span className="cart__item-total-price">
+                            {formatPrice(itemTotal)}
                           </span>
-                          <button
-                            className="cart__quantity-btn"
-                            onClick={() => incrementQuantity(item)}
-                          >
-                            +
-                          </button>
-                        </div>
-
-                        {/* Acciones del item */}
-                        <div className="cart__item-actions">
-                          <button
-                            className="cart__action-btn"
-                            onClick={() => removeItem(item.id)}
-                          >
-                            Eliminar
-                          </button>
-                          <span className="cart__action-separator">|</span>
-                          <button className="cart__action-btn">
-                            Guardar para más tarde
-                          </button>
-                          <span className="cart__action-separator">|</span>
-                          <button className="cart__action-btn">
-                            Compartir
-                          </button>
                         </div>
                       </div>
-
-                      {/* Precio total del item */}
-                      <div className="cart__item-total">
-                        <span className="cart__item-total-price">
-                          {formatPrice(item.price * item.quantity)}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 {/* Resumen del carrito */}
