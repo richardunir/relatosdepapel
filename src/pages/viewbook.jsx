@@ -35,10 +35,12 @@ export function DetalleLibroSection() {
 
                 <div className="book-detail__description-box">
                     <p className="book-detail__description">
-                        El susurro de las páginas <br /><br />
-                        Una obra maestra que combina magistralmente lo real con lo
-                        fantástico. La prosa exquisita crea un universo donde la
-                        realidad y la magia se entrelazan de manera natural.
+                        <p><h1 className="book-detail__title">El susurro de las páginas </h1></p>
+                        <br />
+                        Una obra maestra que combina magistralmente lo real con lo fantástico.
+                        García Márquez crea un universo único donde la magia y la realidad se entrelazan de manera natural.
+                        La prosa es exquisita y cada página está llena de imágenes memorables que permanecen en la mente del
+                        lector mucho después de terminar el libro.
                     </p>
 
                     <ul className="book-detail__specs">
@@ -87,7 +89,7 @@ export function LibrosDestacadosSection() {
     return (
         <section className="featured-books">
             <h2 className="featured-books__title">Libros destacados</h2>
-
+                <br />
             <div className="featured-books__grid">
                 {libros.map((libro, index) => (
                     <article key={index} className="featured-books__card">
