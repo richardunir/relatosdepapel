@@ -5,7 +5,7 @@ import bookAmor from "@booksImagesPath/amor.png";
 import bookMisterios from "@booksImagesPath/misterios.png";
 import bookLucifer from "@assets/pedro-escamilla-lucifer.png"
 import bookPinocho from "@assets/pinocho.png"
-import useCart from "../hooks/useCart";
+import useCart from "@hooks/useCart";
 // Imágenes temporales
 const libroMini = "https://via.placeholder.com/150x200";
 const portadaEjemplo = "https://via.placeholder.com/300x400";

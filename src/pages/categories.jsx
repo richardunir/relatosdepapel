@@ -159,7 +159,7 @@ function BookCard({ books = [] }) {
                   <p>{renderStartElements(b.stars, "info")} {b.stars}</p>
                   <div className="info__price">
                     <p className="price__value">{b.price}</p>
-                    <img className="price__icon" src={icons.add_cart_icon} />
+                    <a className="price__icon" href={`/viewbook?id=${b.id}`}>Ver más</a>
                   </div>
                 </div>
               </div>

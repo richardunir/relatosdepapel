@@ -32,7 +32,7 @@ export default function Header() {
           </li>
 
           <form action="/viewbook" method="GET">
-            <input className="header__icon__search" name="search_book" type="text" placeholder="Libroxxx" />
+            <input className="header__icon__search" name="search_book" type="text" placeholder="Libro" />
           </form>
           
           <a className="header__icon-btn--profile" href="/">

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "@styles/styleCart.css";
-import bookImage from "@booksImagesPath/susurro.png"; 
-import useCart from "../hooks/useCart";
+import useCart from "@hooks/useCart";
 
 function Cart() {
   const navigate = useNavigate();
