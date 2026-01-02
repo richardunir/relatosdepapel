@@ -26,7 +26,7 @@ function Access() {
       }
 
       timeOut.current = setTimeout(() => {
-        nav('/');
+        nav('/categories');
       }, 5000);
     };
 
