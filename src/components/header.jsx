@@ -1,15 +1,10 @@
 import "@styles/header.css";
 import { IconConstants } from "@utils/iconConstants";
 import useCart from "../hooks/useCart";
-import { use, useEffect } from "react";
 
 export default function Header() {
   const icons = IconConstants;
   const { cartItems } = useCart();
-
-  useEffect(() => {
-    // This effect could be used to perform actions when cartItems change
-  }, [cartItems]);
   
   return (
     <header className="header">
