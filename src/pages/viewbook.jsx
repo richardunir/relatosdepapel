@@ -2,17 +2,19 @@ import "@styles/styleviewbook.css";
 import useCart from "@hooks/useCart";
 import { booksImagesConstants } from "@utils/booksConstants";
 import booksData from "@resources/books_data.json";
-
-// Imágenes temporales
-const libroMini = "https://via.placeholder.com/150x200";
-const portadaEjemplo = "https://via.placeholder.com/300x400";
-
-const bookId = 11;
-const book = booksData.books.find(b => b.id === bookId);    
+import { useSearchParams } from "react-router-dom";
+import {  useState } from "react";
+  
 
 /* ================= DETALLE LIBRO ================= */
 export function DetalleLibroSection() {
     const { addToCart } = useCart();
+    const [searchParams] = useSearchParams();
+    const [book] = useState(() => {
+        const idParam = searchParams.get("id");
+        const id = idParam ? parseInt(idParam, 10) : null;
+        return booksData.books.find(b => b.id === id);
+    });
 
     if (!book) return null;
     return (

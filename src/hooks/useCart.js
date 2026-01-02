@@ -3,10 +3,18 @@ import { useState, useEffect } from "react";
 function useCart() {
   const [cartItems, setCartItems] = useState([]);
 
+  
+
   useEffect(() => {
+    
+    const updateCartItems = () => {
     const storedCart = localStorage.getItem("cart");
-    if (storedCart) {setCartItems(JSON.parse(storedCart));}
+        if (storedCart) {setCartItems(JSON.parse(storedCart));} 
+    }
+    updateCartItems();
   }, []);
+
+  
 
   const addToCart = (product) => {
     const cItems = [...cartItems, product]
