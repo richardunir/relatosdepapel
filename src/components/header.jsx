@@ -1,8 +1,10 @@
 import "@styles/header.css";
 import { IconConstants } from "@utils/iconConstants";
+import useCart from "../hooks/useCart";
 
 export default function Header() {
   const icons = IconConstants;
+  const { cartItems } = useCart();
   
   return (
     <header className="header">
@@ -39,6 +41,7 @@ export default function Header() {
             <img src={icons.profile_icon} alt="Perfil" />
           </a>
           <a className="header__icon-btn--cart" href="/cart">
+            <div className="header__icon-btn--cart--count">{cartItems.length}</div>
             <img src={icons.cart_icon} alt="Carrito" />
           </a>
         </ul>

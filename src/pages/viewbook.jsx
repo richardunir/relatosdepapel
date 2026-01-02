@@ -1,59 +1,45 @@
-import "@styles/styleviewbook.css";
-import bookSusurro from "@booksImagesPath/susurro.png";
-import bookCronicas from "@booksImagesPath/cronicas.png";
-import bookAmor from "@booksImagesPath/amor.png";
-import bookMisterios from "@booksImagesPath/misterios.png";
-import bookLucifer from "@assets/pedro-escamilla-lucifer.png"
-import bookPinocho from "@assets/pinocho.png"
+import "@styles/styleviewbook.css"; 
 import useCart from "@hooks/useCart";
+import { booksImagesConstants } from "@utils/booksConstants";
+import booksData from "@resources/books_data.json";
+
 // Imágenes temporales
 const libroMini = "https://via.placeholder.com/150x200";
 const portadaEjemplo = "https://via.placeholder.com/300x400";
 
-const libroEjemplo = {
-            "id": 1,
-            "title": "Cien años de soledad",
-            "author": "Gabriel García Márquez",
-            "genre": "Realismo mágico",
-            "published_year": 1967,
-            "price": "$150.000",
-            "imageKey": "cien_anos_soledad",
-            "stars": 4.8,
-            "description": "Una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo."
-}
+const bookId = 11;
+const book = booksData.books.find(b => b.id === bookId);    
 
 /* ================= DETALLE LIBRO ================= */
 export function DetalleLibroSection() {
     const { addToCart } = useCart();
+
+    if (!book) return null;
     return (
         <section className="book-detail">
 
             <div className="book-detail__image">
-                <img src={bookSusurro} alt="Portada del libro" />
+                <img src={booksImagesConstants[book.imageKey]} alt={`Portada de ${book.title}`} />
             </div>
 
             <div className="book-detail__info">
 
                 <div className="book-detail__header">
-                    <h1 className="book-detail__title">El susurro de las páginas</h1>
+                    <h1 className="book-detail__title">{book.title}</h1>
 
                     <p className="book-detail__author">
-                        María García • Editorial X • Tapa dura
+                        {book.author} • {book.genre} • {book.published_year}
                     </p>
 
                     <div className="book-detail__rating">
-                        ⭐⭐⭐⭐☆ <span>4.5 (128 reseñas)</span>
+                        ⭐ {book.stars} <span>4.5 (128 reseñas)</span>
                     </div>
                 </div>
 
                 <div className="book-detail__description-box">
                     <p className="book-detail__description">
-                        <p><h1 className="book-detail__title">El susurro de las páginas </h1></p>
-                        <br />
-                        Una obra maestra que combina magistralmente lo real con lo fantástico.
-                        García Márquez crea un universo único donde la magia y la realidad se entrelazan de manera natural.
-                        La prosa es exquisita y cada página está llena de imágenes memorables que permanecen en la mente del
-                        lector mucho después de terminar el libro.
+
+                        {book.description}
                     </p>
 
                     <ul className="book-detail__specs">
@@ -64,10 +50,10 @@ export function DetalleLibroSection() {
                             <strong>Editorial:</strong> <span>Editorial</span>
                         </li>
                         <li className="book-detail__spec">
-                            <strong>Autor:</strong> <span>XXXXX</span>
+                            <strong>Autor:</strong> <span>{book.author}</span>
                         </li>
                         <li className="book-detail__spec">
-                            <strong>Páginas:</strong> <span>384</span>
+                            <strong>Genero:</strong> <span>{book.genre}</span>
                         </li>
                         <li className="book-detail__spec">
                             <strong>Idioma:</strong> <span>Español</span>
@@ -80,8 +66,8 @@ export function DetalleLibroSection() {
 
                 <div className="purchase-box">
                     <p className="purchase-box__stock">Quedan 9 unidades</p>
-                    <p className="purchase-box__price">$ 60.000</p>
-                    <button onClick={() => addToCart(libroEjemplo)} className="purchase-box__button">Agregar al carrito</button>
+                    <p className="purchase-box__price">{book.price}</p>
+                    <button onClick={() => addToCart(book)} className="purchase-box__button">Agregar al carrito</button>
                 </div>
             </div>
         </section>
@@ -90,31 +76,32 @@ export function DetalleLibroSection() {
 
 /* ================= DESTACADOS ================= */
 export function LibrosDestacadosSection() {
-    const libros = [
-        { titulo: "El susurro de las paginas", autor: "Maria Garcia", imagen: bookSusurro },
-        { titulo: "Cronicas del tiempo", autor: "Carlos Ruiz", imagen: bookCronicas },
-        { titulo: "Misterios de medianoche", autor: "Ana Martinez", imagen: bookMisterios },
-        { titulo: "Amor en las estrellas", autor: "Laura Fernandez", imagen: bookAmor },
-        { titulo: "Lucifer", autor: "Pedro Escamilla", imagen: bookLucifer },
-        { titulo: "Pinocho", autor: "Carlo Collodi", imagen: bookPinocho },
-    ];
+    const destacados = booksData.books.slice(8, 16);
 
     return (
         <section className="featured-books">
             <h2 className="featured-books__title">Libros destacados</h2>
-                <br />
+
             <div className="featured-books__grid">
-                {libros.map((libro, index) => (
-                    <article key={index} className="featured-books__card">
+                {destacados.map(book => (
+                    <article key={book.id} className="featured-books__card">
                         <img
                             className="featured-books__image"
-                            src={libro.imagen}
-                            alt={`Portada de ${libro.titulo}`}
+                            src={booksImagesConstants[book.imageKey]}
+                            alt={book.title}
                         />
-                        <h3 className="featured-books__book-title">{libro.titulo}</h3>
-                        <h4 className="featured-books__author">{libro.autor}</h4>
-                        <p className="featured-books__category">Categoría X</p>
-                        <button className="featured-books__button">Ver más</button>
+                        <h3 className="featured-books__book-title">
+                            {book.title}
+                        </h3>
+                        <h4 className="featured-books__author">
+                            {book.author}
+                        </h4>
+                        <p className="featured-books__category">
+                            {book.genre}
+                        </p>
+                        <button className="featured-books__button">
+                            Ver más
+                        </button>
                     </article>
                 ))}
             </div>
