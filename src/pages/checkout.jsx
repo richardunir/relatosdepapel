@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "@styles/styleCheckout.css";
-import bookSusurro from "@booksImagesPath/susurro.png";
+import useCart from "../hooks/useCart";
+import { formatPrice } from "../utils/index";
+import { useNavigate } from "react-router-dom";
+import { booksImagesConstants } from "@utils/booksConstants";
 
 function Checkout() {
+  const { cartItems, clearCartItems } = useCart();
+  const [subtotal, setSubtotal] = React.useState(0);
+  const nav = useNavigate();
+
+  useEffect(() => {
+
+    let subtotal = 0;
+    cartItems.forEach((item) => {
+      const priceNumber = parseInt(item.price.replace(/[^0-9]/g, ""), 10);
+      subtotal += priceNumber;
+    });
+    setSubtotal(subtotal);
+
+  }, [cartItems]);
+
+  const payBook = () => {
+    alert("¡Pago realizado con éxito!");
+    clearCartItems();
+    nav('/');
+  }
+
   return (
     <>
       <div className="container">
@@ -24,41 +48,47 @@ function Checkout() {
               <div className="checkout__order-row">
                 <span>Subtotal</span>
                 <span className="checkout__order-value checkout__order-value--red">
-                  $ 45.000
+                 {formatPrice(subtotal)}
                 </span>
               </div>
               <div className="checkout__order-row">
                 <span>Envío</span>
                 <span className="checkout__order-value checkout__order-value--red">
-                  $ 5.000
+                 {formatPrice(5000)}
                 </span>
               </div>
               <div className="checkout__order-row checkout__order-row--total">
                 <span>Total a pagar</span>
                 <span className="checkout__order-value checkout__order-value--total">
-                  $ 50.000
+                 {formatPrice(subtotal + 5000)}
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="checkout__book-section">
-            <div className="checkout__book-title textLeft">Libro1</div>
+          {cartItems.length === 0 ? (
+            <div className="cart__empty">
+              <p>Tu carrito está vacío.</p>
+            </div>
+          ) : cartItems.map((item) => (
+            <div className="checkout__book-section">
+            <div className="checkout__book-title textLeft">{item.title}</div>
             <div className="checkout__book-info">
               <img
                 className="checkout__book-image"
-                src={bookSusurro}
+                src={booksImagesConstants[item.imageKey]}
                 alt="Portada del libro"
               />
               <div className="checkout__book-details">
-                <div className="checkout__book-name">Libro1</div>
-                <div className="checkout__book-author">Autor</div>
-                <div className="checkout__book-price checkout__book-price--red">
-                  $ 45.000
+                <div className="checkout__book-name textLeft">{item.title}</div>
+                <div className="checkout__book-author textLeft">{item.author}</div>
+                <div className="checkout__book-price checkout__book-price--red textLeft">
+                {item.price}
                 </div>
               </div>
             </div>
           </div>
+          ))} 
 
           <div className="checkout__address-section">
             <div className="checkout__address-title">Dirección de entrega</div>
@@ -72,12 +102,12 @@ function Checkout() {
               </p>
             </div>
             <div className="checkout__address-price checkout__address-price--red">
-              $ 50.000
+             {formatPrice(subtotal + 5000)}
             </div>
           </div>
 
           <div className="checkout__pay">
-            <button className="checkout__pay-btn">Pagar</button>
+            <button onClick={payBook} className="checkout__pay-btn">Pagar</button>
           </div>
         </div>
       </div>
