@@ -3,15 +3,12 @@
   text-align: bottom;
   margin: 1% 3% 0.5% 0.5%;
   height: 5%;
-  /* Antes .header__nav aplicaba al contenedor flex, 
-     ahora el <ul> tiene la clase .header__menu para comportarse como flex container si es necesario,
-     pero mantenemos la estructura visual original donde nav es el flex principal */
 }
 
 .header__menu {
     display: flex;
-    width: 100%; /* Asegura que ocupe el nav */
-    justify-content: space-between; /* Distribuye items y logos */
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -32,8 +29,7 @@
 /* Iconos de acción */
 .header__icon-btn {
   padding-top: 1%;
-  padding-left: 1%;
-  display: inline-block; /* Asegura que los enlaces con img se comporten bien */
+  display: inline-block;
 }
 
 .header__icon-btn--search {
@@ -43,24 +39,20 @@
 }
 
 .header__icon__search {
-    /* padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px; */
-
     width: 20rem;
     padding: 10px;
-    /* Importante: Dejar espacio a la izquierda para que el texto no tape la lupa */
     padding-left: 40px; 
     border-radius: 2rem;
     border: 1px solid #ccc;
     font-size: 16px;
     margin-left: 8%;
-
-    /* Configuración de la imagen de fondo */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z' fill='%23777'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: 10px center; /* Posición: 10px desde la izq, centrado vertical */
+    background-position: 10px center;
+}
+
+.header__icon-btn--profile {
+  margin-left: 2%;
 }
 
 .header__icon-btn--cart--count {

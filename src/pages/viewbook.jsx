@@ -2,6 +2,7 @@ import "@styles/styleviewbook.css";
 import useCart from "@hooks/useCart";
 import { booksImagesConstants } from "@utils/booksConstants";
 import booksData from "@resources/books_data.json";
+import { FeaturedBooks } from "@components/featured_books";
 
 // Imágenes temporales
 const libroMini = "https://via.placeholder.com/150x200";
@@ -99,9 +100,9 @@ export function LibrosDestacadosSection() {
                         <p className="featured-books__category">
                             {book.genre}
                         </p>
-                        <button className="featured-books__button">
+                        <p className="featured-books__button" href={`/viewbook?id=${book.id}`}>
                             Ver más
-                        </button>
+                        </p>
                     </article>
                 ))}
             </div>
@@ -114,7 +115,7 @@ export default function Viewbook() {
     return (
         <div className="viewbook">
             <DetalleLibroSection />
-            <LibrosDestacadosSection />
+            <FeaturedBooks />
         </div>
     );
 }

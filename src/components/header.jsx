@@ -1,6 +1,6 @@
 import "@styles/header.css";
 import { IconConstants } from "@utils/iconConstants";
-import useCart from "../hooks/useCart";
+import useCart from "@hooks/useCart";
 
 export default function Header() {
   const icons = IconConstants;
