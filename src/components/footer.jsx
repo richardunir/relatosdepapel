@@ -1,3 +1,5 @@
+import '@styles/footer.css';
+
 export default function Footer() {
   return (
     <>
@@ -7,7 +9,7 @@ export default function Footer() {
   );
 }
 
-export function InformationFooter() {
+function InformationFooter() {
   return (
     <footer className="footer">
       <div className="footer__brand">
@@ -47,7 +49,7 @@ export function InformationFooter() {
   );
 }
 
-export function Copyright() {
+function Copyright() {
   return (
     <section className="copyright">
       <p>© 2025 Relatos de Papel. Todos los derechos reservados. - Grupo 40 UNIR</p>
