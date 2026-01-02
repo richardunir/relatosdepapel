@@ -5,13 +5,26 @@ import bookAmor from "@booksImagesPath/amor.png";
 import bookMisterios from "@booksImagesPath/misterios.png";
 import bookLucifer from "@assets/pedro-escamilla-lucifer.png"
 import bookPinocho from "@assets/pinocho.png"
-
+import useCart from "../hooks/useCart";
 // Imágenes temporales
 const libroMini = "https://via.placeholder.com/150x200";
 const portadaEjemplo = "https://via.placeholder.com/300x400";
 
+const libroEjemplo = {
+            "id": 1,
+            "title": "Cien años de soledad",
+            "author": "Gabriel García Márquez",
+            "genre": "Realismo mágico",
+            "published_year": 1967,
+            "price": "$150.000",
+            "imageKey": "cien_anos_soledad",
+            "stars": 4.8,
+            "description": "Una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo."
+}
+
 /* ================= DETALLE LIBRO ================= */
 export function DetalleLibroSection() {
+    const { addToCart } = useCart();
     return (
         <section className="book-detail">
 
@@ -68,7 +81,7 @@ export function DetalleLibroSection() {
                 <div className="purchase-box">
                     <p className="purchase-box__stock">Quedan 9 unidades</p>
                     <p className="purchase-box__price">$ 60.000</p>
-                    <button className="purchase-box__button">Comprar</button>
+                    <button onClick={() => addToCart(libroEjemplo)} className="purchase-box__button">Agregar al carrito</button>
                 </div>
             </div>
         </section>

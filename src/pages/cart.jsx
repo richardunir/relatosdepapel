@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "@styles/styleCart.css";
-import bookImage from "@booksImagesPath/susurro.png"; // Cambia según tus libros
+import bookImage from "@booksImagesPath/susurro.png"; 
+import useCart from "../hooks/useCart";
 
 function Cart() {
   const navigate = useNavigate();
+  const { cartItems, removeFromCart, addToCart, clearCartItems } = useCart();
   
   // Estado para manejar los productos del carrito
-  const [cartItems, setCartItems] = useState([
+  /*const [cartItems, setCartItems] = useState([
     {
       id: 1,
       title: "Libro 1",
@@ -17,36 +19,40 @@ function Cart() {
       image: bookImage,
     },
     
-  ]);
+  ]);*/
 
   // Función para incrementar cantidad
-  const incrementQuantity = (id) => {
-    setCartItems(
+  const incrementQuantity = (item) => {
+    addToCart(item)
+    /*setCartItems(
       cartItems.map((item) =>
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
       )
-    );
+    );*/
   };
 
   // Función para decrementar cantidad
   const decrementQuantity = (id) => {
+    removeFromCart(id)
+    /*
     setCartItems(
       cartItems.map((item) =>
         item.id === id && item.quantity > 1
           ? { ...item, quantity: item.quantity - 1 }
           : item
       )
-    );
+    );*/
   };
 
   // Función para eliminar producto
   const removeItem = (id) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
+    removeFromCart(id)
+    //setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
   // Función para anular selección de todos
   const clearCart = () => {
-    setCartItems([]);
+    clearCartItems();
   };
 
   // Calcular subtotal
@@ -124,7 +130,7 @@ function Cart() {
                           </span>
                           <button
                             className="cart__quantity-btn"
-                            onClick={() => incrementQuantity(item.id)}
+                            onClick={() => incrementQuantity(item)}
                           >
                             +
                           </button>
