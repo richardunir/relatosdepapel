@@ -210,6 +210,7 @@
     color: #fafafa;
     border-radius: 2rem;
     margin-right: 3%;
+    cursor: pointer;
 }
 
 .content__categories__email {

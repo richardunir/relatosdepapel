@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "@styles/styleAccess.css";
 import booksJson from "@resources/books_data.json";
@@ -6,20 +6,11 @@ import { booksImagesConstants } from "@utils/booksConstants";
 import { IconConstants } from "@utils/iconConstants";
 import { renderStartElements } from "@utils/utils";
 import { EmailSubscription } from "@components/email_section";
+import { FeaturedBooks } from "@components/featured_books";
 
 const books = booksJson.books || [];
 const booksImageConst = booksImagesConstants;
 const icons = IconConstants;
-
-function getRandomSample(arr, n) {
-  if (!Array.isArray(arr) || arr.length === 0) return [];
-  const copy = [...arr];
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy.slice(0, Math.min(n, copy.length));
-} 
 
 function Access() {
 
@@ -97,7 +88,6 @@ function HeroSection() {
 }
 
 function MainContent() {
-  const randomBooks = useMemo(() => getRandomSample(books, 4), [books]);
 
   return (
     <main className="main-content">
@@ -126,39 +116,8 @@ function MainContent() {
           <p className="features__detail">Estamos aquí para ayudarte siempre</p>
         </div>
       </section>
-        
-      <section className="books__list">
-        <h2 className="list__title">Libros destacados</h2>
-        <br />
-        <p className="list__subtitle"> Cada libro es una puerta. Elige la historia que
-            quieres vivir hoy. </p>
-        <br />
-        <br />
-        {books.length === 0 ? (
-          <p>No hay libros disponibles.</p>
-        ) : (
-          <article className="list__book">
-            {randomBooks.map((b) => {
-              return (
-                <div key={b.id} className="book__card__access" href="/viewbook">
-                  <img className="book__image" src={booksImageConst[b.imageKey]} alt={`Portada del libro ${b.title}`} />
-                  <div className="book__information">                  
-                    <h3 className="book__title">{b.title}</h3>
-                    <p className="book__author">{b.author}</p>
-                    <div className="book__stars">
-                      {renderStartElements(b.stars, "book")} {b.stars}
-                    </div>
-                    <div className="book__price">
-                      <p className="price__value">{b.price}</p>
-                        <img className="price__image" src={icons.add_cart_icon} />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </article>
-        )}
-      </section>
+      
+      <FeaturedBooks/>
 
       <section className="content__redirectCategories">
         <a className="redirectCategories__option" href='/categories'>Ver todos los libros</a>
