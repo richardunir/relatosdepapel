@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "@styles/styleCart.css";
-import useCart from "../hooks/useCart";
+import useCart from "@hooks/useCart";
 import { booksImagesConstants } from "@utils/booksConstants";
 
 function Cart() {

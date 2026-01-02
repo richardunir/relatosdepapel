@@ -1,7 +1,7 @@
 import "@styles/styleviewbook.css"; 
-import useCart from "../hooks/useCart";
+import useCart from "@hooks/useCart";
 import { booksImagesConstants } from "@utils/booksConstants";
-import booksData from "../resources/books_data.json";
+import booksData from "@resources/books_data.json";
 
 // Imágenes temporales
 const libroMini = "https://via.placeholder.com/150x200";
